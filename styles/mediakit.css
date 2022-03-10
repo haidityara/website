@@ -1,0 +1,49 @@
+#mediakit{
+    font-family: 'roboto', serif;
+    letter-spacing: -0.01em;
+}
+#mediakit h2, h3{
+    text-align: center;
+}
+
+#mediakit h3{
+    font-size: 28px;
+    font-family: 'inter', serif;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+#mediakit p{
+    font-size: 16px;
+    line-height: 25px;
+}
+
+.media-assets a{
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 18px;
+    border: #0a9e0e 1px solid;
+    border-radius: 20px;
+    height: 40px;
+    width: 120px;
+    margin-right: 10px;
+}
+
+.media-assets a:hover{
+    background-color: #0a9e0e;
+    color: white;
+}
+
+.box-media{
+    padding: 10px;
+}
+
+.box-media img{
+    margin-bottom: 15px;
+}
+
+.box-media .box-color{
+    width: 100px;
+    height: 50px;
+    margin: 0 auto 7px;
+}
