@@ -101,7 +101,7 @@ export default function Footer() {
                         <div className="col-md-4 ms-auto mail-subscription">
                             <form id="email-form" name="email-form" data-name="Email Form" method="get"className="cta6-form-wrap-2" aria-label="Email Form" _lpchecked="1" onSubmit={submitEmail}>
                                 <input type="email" className="sub_input-2 w-input" maxLength="256" name="email" data-name="Email 3" placeholder="Enter your email" id="email-3" required/>
-                                <button id="con_wallet-txt" className="btn_b ps-2 pe-2 flip" type="submit">
+                                <button id="con_wallet-txt" className="btn_b ps-2 pe-2 flip" type="submit" style={{border:'none'}}>
                                     <div className="btn_b--textwrap h-100">
                                         <div id="con_wallet" className="btn_b--txt d-flex align-items-center justify-content-center">
                                             Subscribe
