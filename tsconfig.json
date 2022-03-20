@@ -14,7 +14,14 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": "./src",
+    "paths": {
+      "components": ["./components"],
+      "assets": ["./assets"],
+      "sections": ["./sections"],
+    }
   },
-  "include": ["src", "src/type.d.ts"]
+  "include": ["src", "src/type.d.ts"],
+  "exclude": ["config-overrides.js"]
 }

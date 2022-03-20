@@ -1,6 +1,6 @@
-import { FC } from 'react'
-import styled from 'styled-components'
-import { ReactComponent as ArrowSvg } from '../assets/arrow.svg'
+import { forwardRef, HTMLAttributes, PropsWithChildren } from 'react';
+import styled from 'styled-components';
+import { ReactComponent as ArrowSvg } from 'assets/arrow.svg';
 
 const WrapperButton = styled.div`
   color: #00ff19;
@@ -14,16 +14,22 @@ const WrapperButton = styled.div`
     0px 19px 16px rgba(0, 0, 0, 0.09);
   border-radius: 8px;
   padding: 15.5px 17px;
-  min-width: 181px;
+  width: 181px;
   font-size: 20px;
   line-height: 24px;
-`
+`;
 
-const Button: FC = ({ children }) => (
-  <WrapperButton>
-    {children}
-    <ArrowSvg style={{ marginLeft: 8 }} />
-  </WrapperButton>
-)
+interface ButtonProps extends HTMLAttributes<HTMLDivElement> {
+  onClick?: () => void;
+}
 
-export default Button
+const Button = forwardRef<HTMLDivElement, PropsWithChildren<ButtonProps>>(
+  ({ onClick, children, ...props }, ref) => (
+    <WrapperButton ref={ref} onClick={onClick} {...props}>
+      {children}
+      <ArrowSvg style={{ marginLeft: 8 }} />
+    </WrapperButton>
+  )
+);
+
+export default Button;
