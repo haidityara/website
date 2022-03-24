@@ -34,7 +34,7 @@ const BeginSectionContainer = styled.div`
 
 const AboutSection = () => (
   <BgContainer>
-    <BeginSectionContainer>
+    <BeginSectionContainer id="about-us">
       <div
         style={{
           display: 'flex',

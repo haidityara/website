@@ -10,7 +10,7 @@ const RecruimentProcessSection = lazy(
   () => import('sections/RecruimentProcessSection')
 );
 const WrappedTeamSection = lazy(() => import('sections/WrappedTeamSection'));
-
+const FlyWheelSection = lazy(() => import('sections/FlyWheelSection'));
 const TokenSection = lazy(() => import('sections/TokenSection'));
 
 const App = () => (
@@ -24,6 +24,7 @@ const App = () => (
         <MetaverseSection />
         <RobotGalaxySection />
         <WrappedTeamSection />
+        <FlyWheelSection />
         <div style={{ height: '200vh' }} />
       </div>
     </ParallaxProvider>

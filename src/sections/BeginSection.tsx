@@ -18,10 +18,28 @@ const BeginSectionContainer = styled.div`
   background-size: cover;
 `;
 
+const BigGlowText = styled.h2`
+  max-width: 950px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 100px;
+  line-height: 105px;
+  text-align: left;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #00ff19;
+  text-shadow: 0px 0px 20px rgba(0, 255, 25, 0.9);
+  margin-top: 156px;
+`;
+
 const BeginSection = () => (
   <BeginSectionContainer>
     <Header />
     <img src={Robot1} alt="" />
+    <div style={{ width: '80%', margin: 'auto' }}>
+      <BigGlowText>$TEAM up with the metaverse’s first Guild 3.0</BigGlowText>
+    </div>
   </BeginSectionContainer>
 );
 

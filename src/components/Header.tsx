@@ -13,6 +13,7 @@ const NavContainer = styled.div`
   gap: 40px;
   align-items: center;
   a {
+    text-decoration: none;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
