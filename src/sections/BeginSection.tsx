@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import Header from 'components/Header';
 import Bg1 from 'assets/bg1.png';
 import Robot1 from 'assets/robot1.png';
+import CircleDown from 'assets/circle-down.png';
 
 const BeginSectionContainer = styled.div`
   background-image: linear-gradient(
@@ -40,6 +41,8 @@ const BeginSection = () => (
     <div style={{ width: '80%', margin: 'auto' }}>
       <BigGlowText>$TEAM up with the metaverse’s first Guild 3.0</BigGlowText>
     </div>
+
+    <img src={CircleDown} alt="" style={{ display: 'block', margin: 'auto' }} />
   </BeginSectionContainer>
 );
 

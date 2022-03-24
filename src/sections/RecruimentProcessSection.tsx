@@ -5,7 +5,6 @@ import imgNum1 from 'assets/number1-stroke.png';
 import imgNum2 from 'assets/number2-stroke.png';
 import imgNum3 from 'assets/number3-stroke.png';
 import BlurredCircle from 'components/BlurredCircle';
-import { ReactComponent as HexagonSvg } from 'assets/hexagon.svg';
 
 const Container = styled.div`
   position: relative;
@@ -46,7 +45,6 @@ const RecruimentProcessSection = () => (
       </TagContainer>
     </div>
     <BlurredCircle left="94vw" top={100} />
-    <HexagonSvg style={{ position: 'absolute', left: '94vw', top: 100 }} />
   </Container>
 );
 

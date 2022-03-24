@@ -2,7 +2,7 @@ import { forwardRef, HTMLAttributes, PropsWithChildren } from 'react';
 import styled from 'styled-components';
 import { ReactComponent as ArrowSvg } from 'assets/arrow.svg';
 
-const WrapperButton = styled.div`
+const WrapperButton = styled.div<{ isActive?: boolean }>`
   color: #00ff19;
   font-weight: 500;
   border: 1px solid #00ff19;
@@ -17,10 +17,19 @@ const WrapperButton = styled.div`
   width: 181px;
   font-size: 20px;
   line-height: 24px;
+  transition: 0.2s ease all;
+  cursor: pointer;
+
+  ${({ isActive }) => (isActive ? 'background-color: #3f701e;' : '')}
+
+  &:hover {
+    background-color: #3f701e;
+  }
 `;
 
 interface ButtonProps extends HTMLAttributes<HTMLDivElement> {
   onClick?: () => void;
+  isActive?: boolean;
 }
 
 const Button = forwardRef<HTMLDivElement, PropsWithChildren<ButtonProps>>(

@@ -8,6 +8,7 @@ import Token4 from 'assets/token-4.png';
 import Token5 from 'assets/token-5.png';
 import Fragment from 'assets/fragment4.png';
 import ScrollAnimation from 'react-animate-on-scroll';
+import BlurredCircle from 'components/BlurredCircle';
 
 const BgContainer = styled.div`
   background: linear-gradient(
@@ -20,6 +21,7 @@ const BgContainer = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
+  position: relative;
 `;
 
 const BeginSectionContainer = styled.div`
@@ -27,7 +29,7 @@ const BeginSectionContainer = styled.div`
   margin: auto;
   display: flex;
   align-items: center;
-  min-height: 800px;
+  min-height: 100vh;
   justify-content: center;
 `;
 
@@ -93,6 +95,9 @@ const RobotGalaxySection = () => (
         </Parallax>
       </ScrollAnimation>
     </BeginSectionContainer>
+
+    <BlurredCircle top="20%" left={-100} />
+    <BlurredCircle top="70%" left="100vw" />
   </BgContainer>
 );
 

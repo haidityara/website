@@ -12,6 +12,7 @@ const RecruimentProcessSection = lazy(
 const WrappedTeamSection = lazy(() => import('sections/WrappedTeamSection'));
 const FlyWheelSection = lazy(() => import('sections/FlyWheelSection'));
 const TokenSection = lazy(() => import('sections/TokenSection'));
+const LogoCarousel = lazy(() => import('sections/LogoCarousel'));
 
 const App = () => (
   <Suspense fallback={<LoadingScreen />}>
@@ -22,6 +23,7 @@ const App = () => (
         <RecruimentProcessSection />
         <TokenSection />
         <MetaverseSection />
+        <LogoCarousel />
         <RobotGalaxySection />
         <WrappedTeamSection />
         <FlyWheelSection />

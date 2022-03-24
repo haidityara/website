@@ -7,7 +7,6 @@ import imgRobot from 'assets/robot-no-reflect.png';
 import imgFragment1 from 'assets/fragment1.png';
 import imgFragment2 from 'assets/fragment2.png';
 import imgFragment3 from 'assets/fragment3.png';
-import { ReactComponent as HexagonSvg } from 'assets/hexagon.svg';
 import ScrollAnimation from 'react-animate-on-scroll';
 
 const BgContainer = styled.div`
@@ -43,16 +42,6 @@ const AboutSection = () => (
         }}
       >
         <H2>About TEAM</H2>
-        <HexagonSvg
-          style={{
-            position: 'absolute',
-            top: 750,
-            left: -290,
-            width: '90%',
-            height: '90%',
-            pointerEvents: 'none'
-          }}
-        />
         <Paragraph style={{ marginTop: 24, width: 260 }}>
           TEAM™ has a proprietary scalable solution for guild management
         </Paragraph>
