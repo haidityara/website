@@ -1,6 +1,7 @@
+import Image from 'components/Image';
 import styled from 'styled-components';
-import imgLogo from 'assets/team-dao-logo.png';
-import { ReactComponent as GlobeIcon } from 'assets/globe.svg';
+import imgLogo from 'public/assets/team-dao-logo.png';
+import GlobeIcon from 'public/assets/globe.svg';
 
 const HeaderContainer = styled.div`
   display: flex;
@@ -25,7 +26,7 @@ const NavContainer = styled.div`
 
 const Header = () => (
   <HeaderContainer>
-    <img src={imgLogo} alt="logo" />
+    <Image src={imgLogo} alt="logo" />
     <NavContainer>
       <a href="#about-us">About us</a>
       <a href="#token">Token</a>

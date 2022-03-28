@@ -1,14 +1,15 @@
 import styled from 'styled-components';
 import { Parallax } from 'react-scroll-parallax';
-import bgGalaxy from 'assets/galaxy-night-view-2.png';
-import imgRobot from 'assets/robot-no-reflect.png';
-import imgFragment1 from 'assets/fragment1.png';
-import imgFragment2 from 'assets/fragment2.png';
-import Token4 from 'assets/token-4.png';
-import Token5 from 'assets/token-5.png';
-import Fragment from 'assets/fragment4.png';
+import bgGalaxy from 'public/assets/galaxy-night-view-2.png';
+import imgRobot from 'public/assets/robot-no-reflect.png';
+import imgFragment1 from 'public/assets/fragment1.png';
+import imgFragment2 from 'public/assets/fragment2.png';
+import Token4 from 'public/assets/token-4.png';
+import Token5 from 'public/assets/token-5.png';
+import Fragment from 'public/assets/fragment4.png';
 import ScrollAnimation from 'react-animate-on-scroll';
 import BlurredCircle from 'components/BlurredCircle';
+import Image from 'components/Image';
 
 const BgContainer = styled.div`
   background: linear-gradient(
@@ -17,7 +18,7 @@ const BgContainer = styled.div`
       rgba(0, 0, 0, 0) 80%,
       rgba(0, 0, 0, 1) 100%
     ),
-    url(${bgGalaxy});
+    url(${bgGalaxy.src});
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -40,55 +41,52 @@ const RobotGalaxySection = () => (
         <Parallax easing="easeIn" translateY={[100, 0]}>
           <div style={{ position: 'relative' }}>
             <Parallax speed={12}>
-              <img
+              <div
                 className="teamdao-pulse"
-                src={imgFragment2}
                 style={{ position: 'absolute', left: 50, top: -330 }}
-                width={272}
-                alt=""
-              />
+              >
+                <Image src={imgFragment2} width={272} alt="" />
+              </div>
             </Parallax>
             <Parallax speed={15.5}>
-              <img
+              <div
                 className="teamdao-pulse-delay"
-                src={imgRobot}
                 style={{ position: 'absolute', top: -150 }}
-                width={300}
-                alt=""
-              />
+              >
+                <Image src={imgRobot} width={300} alt="" />
+              </div>
             </Parallax>
             <Parallax speed={16}>
-              <img
+              <div
                 className="teamdao-pulse"
-                src={imgFragment1}
                 style={{ position: 'absolute', top: -100 }}
-                width={300}
-                alt=""
-              />
+              >
+                <Image src={imgFragment1} width={300} alt="" />
+              </div>
             </Parallax>
             <Parallax speed={3}>
-              <img
+              <div
                 className="teamdao-pulse-delay"
-                src={Fragment}
                 style={{ position: 'absolute', top: -280, left: -380 }}
-                alt=""
-              />
+              >
+                <Image src={Fragment} alt="" />
+              </div>
             </Parallax>
             <Parallax speed={10}>
-              <img
+              <div
                 className="teamdao-pulse-delay"
-                src={Token4}
                 style={{ position: 'absolute', top: -30, left: -520 }}
-                alt=""
-              />
+              >
+                <Image src={Token4} alt="" />
+              </div>
             </Parallax>
             <Parallax speed={9}>
-              <img
+              <div
                 className="teamdao-pulse-delay"
-                src={Token5}
                 style={{ position: 'absolute', top: 200, left: 500 }}
-                alt=""
-              />
+              >
+                <Image src={Token5} alt="" />
+              </div>
             </Parallax>
             <div style={{ width: 300, height: 10, visibility: 'hidden' }} />
           </div>

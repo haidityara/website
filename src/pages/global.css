@@ -1,0 +1,92 @@
+@font-face {
+    font-family: 'Technology';
+    src: url('/fonts/Technology.ttf') format('truetype');
+  }
+
+  @keyframes teamdao-shake-anim {
+    0% {
+      transform: translate(1px, 1px);
+    }
+
+    10% {
+      transform: translate(-1px, -2px);
+    }
+
+    20% {
+      transform: translate(-3px, 0px);
+    }
+
+    30% {
+      transform: translate(3px, 2px);
+    }
+
+    40% {
+      transform: translate(1px, -1px);
+    }
+
+    50% {
+      transform: translate(-1px, 2px);
+    }
+
+    60% {
+      transform: translate(-3px, 1px);
+    }
+
+    70% {
+      transform: translate(3px, 1px);
+    }
+
+    80% {
+      transform: translate(-1px, -1px);
+    }
+
+    90% {
+      transform: translate(1px, 2px);
+    }
+
+    100% {
+      transform: translate(1px, -2px);
+    }
+  }
+
+  @keyframes teamdao-pulse-anim {
+    from {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(10px);
+    }
+
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+    width: 100vw;
+    overflow-x: hidden;
+    background-color: black;
+  }
+
+  .teamdao-pulse {
+    animation-name: teamdao-pulse-anim;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+
+  .teamdao-pulse-delay {
+    animation-name: teamdao-pulse-anim;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+  }
+
+  .teamdao-shake {
+    animation: teamdao-shake-anim 0.2s;
+    animation-iteration-count: infinite;
+  }

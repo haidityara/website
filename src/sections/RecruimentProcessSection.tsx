@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 import HexagonTag from 'components/HexagonTag';
 import { H3 } from 'components/Typo';
-import imgNum1 from 'assets/number1-stroke.png';
-import imgNum2 from 'assets/number2-stroke.png';
-import imgNum3 from 'assets/number3-stroke.png';
+import imgNum1 from 'public/assets/number1-stroke.png';
+import imgNum2 from 'public/assets/number2-stroke.png';
+import imgNum3 from 'public/assets/number3-stroke.png';
 import BlurredCircle from 'components/BlurredCircle';
+import Image from 'components/Image';
 
 const Container = styled.div`
   position: relative;
@@ -34,9 +35,15 @@ const RecruimentProcessSection = () => (
     <H3 style={{ width: 562 }}>Automated and scalable recruitment process</H3>
     <div style={{ position: 'relative', marginTop: 36 }}>
       <NumberContainer>
-        <img src={imgNum1} alt="number-1" />
-        <img src={imgNum2} alt="number-2" style={{ marginLeft: 173 }} />
-        <img src={imgNum3} alt="number-3" style={{ marginLeft: 100 }} />
+        <div>
+          <Image src={imgNum1} alt="number-1" />
+        </div>
+        <div style={{ marginLeft: 173 }}>
+          <Image src={imgNum2} alt="number-2" />
+        </div>
+        <div style={{ marginLeft: 100 }}>
+          <Image src={imgNum3} alt="number-3" />
+        </div>
       </NumberContainer>
       <TagContainer>
         <HexagonTag>Iniciate / Recruit</HexagonTag>

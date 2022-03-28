@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import imgLoading from 'assets/animated-loader.gif';
+import imgLoading from 'public/assets/animated-loader.gif';
+import Image from 'components/Image';
 
 const Container = styled.div`
   width: 100vw;
@@ -12,7 +13,7 @@ const Container = styled.div`
 
 const LoadingScreen = () => (
   <Container>
-    <img src={imgLoading} alt="loading" />
+    <Image src={imgLoading} alt="loading" />
   </Container>
 );
 

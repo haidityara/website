@@ -1,13 +1,14 @@
 import styled from 'styled-components';
 import { Parallax } from 'react-scroll-parallax';
 import { H2, H4, Paragraph } from 'components/Typo';
-import imgRocket from 'assets/rocket.png';
-import imgToken1 from 'assets/token-1.png';
-import imgToken2 from 'assets/token-2.png';
-import imgToken3 from 'assets/token-3.png';
+import imgRocket from 'public/assets/rocket.png';
+import imgToken1 from 'public/assets/token-1.png';
+import imgToken2 from 'public/assets/token-2.png';
+import imgToken3 from 'public/assets/token-3.png';
 import Particles from 'react-tsparticles';
-import particleConfig from 'assets/particleBottomRight.json';
+import particleConfig from 'public/assets/particleBottomRight.json';
 import BlurredCircle from 'components/BlurredCircle';
+import Image from 'components/Image';
 
 const Container = styled.div`
   max-width: 80%;
@@ -15,6 +16,11 @@ const Container = styled.div`
   min-height: 800px;
   padding-top: 410px;
   position: relative;
+
+  h4 {
+    margin-top: 34px;
+    display: inline-block;
+  }
 
   #tsparticles {
     canvas {
@@ -43,13 +49,13 @@ const TokenSection = () => (
         pointerEvents: 'none'
       }}
     >
-      <img src={imgRocket} alt="rocket" className="teamdao-shake" />
+      <Image src={imgRocket} alt="rocket" className="teamdao-shake" />
     </Parallax>
     <H2 style={{ width: 562 }}>Token flywheel</H2>
 
     <Columns>
       <div>
-        <img src={imgToken1} alt="token" style={{ marginBottom: 34 }} />
+        <Image src={imgToken1} alt="token" />
         <H4>Tech-enabled guild scalability</H4>
         <Paragraph>
           <ul>
@@ -65,7 +71,7 @@ const TokenSection = () => (
         </Paragraph>
       </div>
       <div>
-        <img src={imgToken2} alt="token" style={{ marginBottom: 34 }} />
+        <Image src={imgToken2} alt="token" />
         <H4>Curated quality for players and assets</H4>
         <Paragraph>
           <ul>
@@ -81,7 +87,7 @@ const TokenSection = () => (
         </Paragraph>
       </div>
       <div>
-        <img src={imgToken3} alt="token" style={{ marginBottom: 34 }} />
+        <Image src={imgToken3} alt="token" />
         <H4>Fantasy eSports league for aspiring TEAM Owners</H4>
         <Paragraph>
           <ul>

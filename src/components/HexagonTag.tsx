@@ -1,6 +1,6 @@
 import { forwardRef, HTMLAttributes, PropsWithChildren } from 'react';
 import styled from 'styled-components';
-import imgHexagon from 'assets/hexagon.png';
+import imgHexagon from 'public/assets/hexagon.png';
 
 const Wrapper = styled.div`
   font-family: 'Technology';
@@ -20,7 +20,7 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
 
-  background-image: url(${imgHexagon});
+  background-image: url(${imgHexagon.src});
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;

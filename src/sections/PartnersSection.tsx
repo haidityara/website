@@ -1,18 +1,19 @@
 import styled from 'styled-components';
 import { H2, H4, Paragraph } from 'components/Typo';
-import imgBackground from 'assets/partners-background.png';
-import imgAnimoca from 'assets/partners-animoca.png';
-import imgKrust from 'assets/partners-krust.png';
-import imgShima from 'assets/partners-shima.png';
-import imgAlgorand from 'assets/partners-algorand.png';
-import imgLibra from 'assets/partners-libra.png';
-import imgNexo from 'assets/partners-nexo.png';
-import imgGsr from 'assets/partners-gsr.png';
-import imgExcap from 'assets/partners-excapital.png';
-import imgBp from 'assets/partners-bridgeport.png';
-import imgOctava from 'assets/partners-octava.png';
-import imgReadWP from 'assets/partners-readWhitepaper.svg';
+import imgBackground from 'public/assets/partners-background.png';
+import imgAnimoca from 'public/assets/partners/partners-animoca.png';
+import imgKrust from 'public/assets/partners/partners-krust.png';
+import imgShima from 'public/assets/partners/partners-shima.png';
+import imgAlgorand from 'public/assets/partners/partners-algorand.png';
+import imgLibra from 'public/assets/partners/partners-libra.png';
+import imgNexo from 'public/assets/partners/partners-nexo.png';
+import imgGsr from 'public/assets/partners/partners-gsr.png';
+import imgExcap from 'public/assets/partners/partners-excapital.png';
+import imgBp from 'public/assets/partners/partners-bridgeport.png';
+import imgOctava from 'public/assets/partners/partners-octava.png';
+import imgReadWP from 'public/assets/whitepaper-container.png';
 import Button from 'components/Button';
+import Image from 'components/Image';
 
 const BgContainer = styled.div`
   background: linear-gradient(
@@ -44,10 +45,15 @@ const Container = styled.div`
 const Columns = styled.div`
   display: flex;
   gap: 40px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  > div {
+    width: 20%;
+  }
 `;
 
 const Item = styled.div`
-  width: 100%;
+  margin-bottom: 80px;
 `;
 
 const PartnersSection = () => (
@@ -59,63 +65,62 @@ const PartnersSection = () => (
         </div>
         <Columns>
           <Item>
-            <img src={imgAnimoca} alt="partner" style={{ marginBottom: 80 }} />
+            <Image src={imgAnimoca} alt="partner" />
           </Item>
           <Item>
-            <img src={imgKrust} alt="partner" style={{ marginBottom: 80 }} />
+            <Image src={imgKrust} alt="partner" />
           </Item>
           <Item>
-            <img src={imgShima} alt="partner" style={{ marginBottom: 80 }} />
+            <Image src={imgShima} alt="partner" />
           </Item>
           <Item>
-            <img src={imgShima} alt="partner" style={{ marginBottom: 80 }} />
-          </Item>
-        </Columns>
-        <Columns>
-          <Item>
-            <img src={imgAlgorand} alt="partner" style={{ marginBottom: 80 }} />
+            <Image src={imgShima} alt="partner" />
           </Item>
           <Item>
-            <img src={imgLibra} alt="partner" style={{ marginBottom: 80 }} />
+            <Image src={imgAlgorand} alt="partner" />
           </Item>
           <Item>
-            <img src={imgNexo} alt="partner" style={{ marginBottom: 80 }} />
+            <Image src={imgLibra} alt="partner" />
           </Item>
           <Item>
-            <img src={imgGsr} alt="partner" style={{ marginBottom: 80 }} />
-          </Item>
-        </Columns>
-        <Columns>
-          <Item>
-            <img src={imgExcap} alt="partner" style={{ marginBottom: 80 }} />
+            <Image src={imgNexo} alt="partner" />
           </Item>
           <Item>
-            <img src={imgBp} alt="partner" style={{ marginBottom: 80 }} />
+            <Image src={imgGsr} alt="partner" />
           </Item>
-          <Item style={{ marginTop: 20 }}>
+          <Item>
+            <Image src={imgExcap} alt="partner" />
+          </Item>
+          <Item>
+            <Image src={imgBp} alt="partner" />
+          </Item>
+          <Item>
             <H4>Ap3 Capital</H4>
           </Item>
           <Item>
-            <img src={imgOctava} alt="partner" style={{ marginBottom: 80 }} />
+            <Image src={imgOctava} alt="partner" />
           </Item>
-        </Columns>
-        <Columns>
-          <Item style={{ marginTop: 20 }}>
+          <Item>
             <H4>NGC Ventures</H4>
           </Item>
-          <Item style={{ marginTop: 20 }}>
+          <Item>
             <H4>GSG</H4>
           </Item>
         </Columns>
 
         <div style={{ position: 'relative' }}>
+          <div style={{ marginBottom: 80, width: '100%', minWidth: 700 }}>
+            <Image src={imgReadWP} alt="partner" />
+          </div>
+
           <div
             style={{
               position: 'absolute',
-              width: 'calc(50% - 4%)',
+              width: 'calc(50% - 8%)',
               textAlign: 'left',
               padding: '2%',
               top: '32%',
+              left: '4%',
               minWidth: 400
             }}
           >
@@ -129,11 +134,6 @@ const PartnersSection = () => (
 
             <Button style={{ marginTop: 30 }}>Coming Soon</Button>
           </div>
-          <img
-            src={imgReadWP}
-            alt="partner"
-            style={{ marginBottom: 80, width: '100%', minWidth: 700 }}
-          />
         </div>
       </Container>
     </BgContainer>

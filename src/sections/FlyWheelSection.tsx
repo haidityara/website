@@ -1,14 +1,16 @@
 import styled from 'styled-components';
 import { H2, H4, Paragraph } from 'components/Typo';
-import imgSteamFlyWheel from 'assets/fly-wheel.png';
+import imgSteamFlyWheel from 'public/assets/fly-wheel.png';
+import imgSteamFlyWheelToken from 'public/assets/fly-wheel-token.png';
 import Button from 'components/Button';
-import imgCloud from 'assets/cloud.png';
+import imgCloud from 'public/assets/cloud.png';
 import { Parallax } from 'react-scroll-parallax';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
+import Image from 'components/Image';
 
 const Container = styled.div`
   margin-top: 50px;
-  background: url(${imgCloud});
+  background: url(${imgCloud.src});
   background-size: contain;
   background-position: right;
   background-repeat: no-repeat;
@@ -21,6 +23,7 @@ const Container = styled.div`
 
 const SubContainer = styled.div`
   width: 80%;
+  gap: 30px;
   marign: auto;
   display: flex;
   h2 {
@@ -49,16 +52,50 @@ const ButtonContainer = styled.div`
   }
 `;
 
+const infos = [
+  {
+    title: 'PLAYERS',
+    content: [
+      '% of player earmings governed by DAO, purchase $TEAM',
+      'Players are paid in $TEAM with the option to stake $TEAM for higher yields'
+    ]
+  },
+  {
+    title: 'OWNERS',
+    content: [
+      'Owners pay wrapped team markups & marketplace transaction fees with $TEAM'
+    ]
+  },
+  {
+    title: 'ASSETS',
+    content: [
+      'DAO retains ownership % of all wTEAMs, creating exposure to asset appreciation w/out depreciation risk.',
+      '$TEAM holders have voting rights on DAO assets'
+    ]
+  }
+];
+
 const FlyWheelSection = () => {
   const [selected, setSelected] = useState(0);
+  const intervalRef = useRef<any>(null);
+
+  const data = infos[selected];
 
   useEffect(() => {
     const interval = setInterval(() => setSelected((v) => (v + 1) % 3), 5000);
-
+    intervalRef.current = interval;
     return () => {
       clearInterval(interval);
+      intervalRef.current = null;
     };
   }, []);
+
+  const handleSelect = (index: number) => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+    setSelected(index);
+  };
 
   return (
     <Container>
@@ -67,31 +104,48 @@ const FlyWheelSection = () => {
           <Parallax translateY={[10, -10]}>
             <H2>$TEAM FLYWHEEL</H2>
             <ButtonContainer>
-              <Button isActive={selected === 0}>PLAYER</Button>
-              <Button isActive={selected === 1}>ASSETS</Button>
-              <Button isActive={selected === 2}>OWNER</Button>
+              <Button onClick={() => handleSelect(0)} isActive={selected === 0}>
+                PLAYERS
+              </Button>
+              <Button onClick={() => handleSelect(1)} isActive={selected === 1}>
+                OWNERS
+              </Button>
+              <Button onClick={() => handleSelect(2)} isActive={selected === 2}>
+                ASSETS
+              </Button>
             </ButtonContainer>
             <ParagraphContainer style={{ marginTop: 50 }}>
-              <H4>PLAYERS</H4>
+              <H4>{data.title}</H4>
               <Paragraph>
                 <ul>
-                  <li>% of player earmings governed by DAO, purchase $TEAM</li>
-                  <li>
-                    Players are paid in $TEAM with the option to stake $TEAM for
-                    higher yields
-                  </li>
+                  {data.content.map((e) => (
+                    <li key={e}>{e}</li>
+                  ))}
                 </ul>
               </Paragraph>
             </ParagraphContainer>
           </Parallax>
         </div>
 
-        <div>
+        <div style={{ position: 'relative' }}>
           <Parallax translateY={[-5, 5]}>
-            <img width="95%" src={imgSteamFlyWheel} alt="" />
+            <Parallax
+              className="teamdao-pulse"
+              translateY={[-5, 5]}
+              style={{
+                position: 'absolute',
+                bottom: '25%',
+                right: '40%',
+                zIndex: 100
+              }}
+            >
+              <Image src={imgSteamFlyWheelToken} alt="" objectFit="contain" />
+            </Parallax>
+            <Image src={imgSteamFlyWheel} alt="" objectFit="contain" />
           </Parallax>
         </div>
       </SubContainer>
+      <div style={{ width: '100%', height: 100 }} />
     </Container>
   );
 };

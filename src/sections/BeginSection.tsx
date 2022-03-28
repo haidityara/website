@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 import Header from 'components/Header';
-import Bg1 from 'assets/bg1.png';
-import Robot1 from 'assets/robot1.png';
-import CircleDown from 'assets/circle-down.png';
+import Bg1 from 'public/assets/bg1.png';
+import Robot1 from 'public/assets/robot1.png';
+import CircleDown from 'public/assets/circle-down.png';
+import Image from 'components/Image';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const BeginSectionContainer = styled.div`
   background-image: linear-gradient(
@@ -12,11 +14,13 @@ const BeginSectionContainer = styled.div`
       rgba(0, 0, 0, 0) 58.51%,
       #000000 90.91%
     ),
-    url(${Bg1});
+    url(${Bg1.src});
   min-height: 100vh;
   background-position: center;
   background-color: black;
-  background-size: cover;
+  background-size: contain;
+  background-position: top;
+  background-repeat: no-repeat;
 `;
 
 const BigGlowText = styled.h2`
@@ -31,18 +35,35 @@ const BigGlowText = styled.h2`
   text-transform: uppercase;
   color: #00ff19;
   text-shadow: 0px 0px 20px rgba(0, 255, 25, 0.9);
-  margin-top: 156px;
+  margin-top: 0;
+`;
+
+const ImgContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
 `;
 
 const BeginSection = () => (
   <BeginSectionContainer>
     <Header />
-    <img src={Robot1} alt="" />
+    <ImgContainer style={{ marginTop: 100 }}>
+      <ScrollAnimation animateIn="flash" animateOnce>
+        <Image className="teamdao-pulse" src={Robot1} alt="" />
+      </ScrollAnimation>
+    </ImgContainer>
     <div style={{ width: '80%', margin: 'auto' }}>
       <BigGlowText>$TEAM up with the metaverse’s first Guild 3.0</BigGlowText>
     </div>
 
-    <img src={CircleDown} alt="" style={{ display: 'block', margin: 'auto' }} />
+    <ImgContainer style={{ height: 100 }}>
+      <Image
+        className="teamdao-pulse-delay"
+        objectFit="contain"
+        src={CircleDown}
+        alt=""
+      />
+    </ImgContainer>
   </BeginSectionContainer>
 );
 

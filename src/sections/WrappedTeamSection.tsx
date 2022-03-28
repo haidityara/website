@@ -1,14 +1,15 @@
 import styled from 'styled-components';
 import { H3, Paragraph } from 'components/Typo';
-import imgValueChain from 'assets/value-chain.png';
-import imgEarn from 'assets/wrapped-team-earn.png';
-import imgTrade from 'assets/wrapped-team-trade.png';
-import imgDevelop from 'assets/wrapped-team-develop.png';
-import imgEarth from 'assets/earth.png';
+import imgValueChain from 'public/assets/value-chain.png';
+import imgEarn from 'public/assets/wrapped-team-earn.png';
+import imgTrade from 'public/assets/wrapped-team-trade.png';
+import imgDevelop from 'public/assets/wrapped-team-develop.png';
+import imgEarth from 'public/assets/earth.png';
 import ScrollAnimation from 'react-animate-on-scroll';
+import Image from 'components/Image';
 
 const EarthBG = styled.div`
-  background: url(${imgEarth});
+  background: url(${imgEarth.src});
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -83,7 +84,7 @@ const WrappedTeamSection = () => (
     <SubContainer>
       <H3>WRAPPED TEAM (wTEAM) VALUE CHAIN</H3>
       <div>
-        <img width="100%" src={imgValueChain} alt="" />
+        <Image objectFit="contain" src={imgValueChain} alt="" />
       </div>
     </SubContainer>
 
@@ -105,7 +106,12 @@ const WrappedTeamSection = () => (
             </ScrollAnimation>
           </div>
           <ScrollAnimation animateOnce animateIn="fadeInRight">
-            <img src={imgEarn} alt="earn" className="teamdao-pulse" />
+            <Image
+              src={imgEarn}
+              objectFit="contain"
+              alt="earn"
+              className="teamdao-pulse"
+            />
           </ScrollAnimation>
         </ChildSection>
         <ChildSection>
@@ -126,7 +132,12 @@ const WrappedTeamSection = () => (
             animateIn="fadeInRight"
             style={{ maxWidth: 'unset' }}
           >
-            <img src={imgTrade} alt="trade" className="teamdao-pulse" />
+            <Image
+              src={imgTrade}
+              objectFit="contain"
+              alt="trade"
+              className="teamdao-pulse"
+            />
           </ScrollAnimation>
         </ChildSection>
         <ChildSection>
@@ -143,7 +154,12 @@ const WrappedTeamSection = () => (
             </ScrollAnimation>
           </div>
           <ScrollAnimation animateOnce animateIn="fadeInRight">
-            <img src={imgDevelop} alt="develop" className="teamdao-pulse" />
+            <Image
+              src={imgDevelop}
+              objectFit="contain"
+              alt="develop"
+              className="teamdao-pulse"
+            />
           </ScrollAnimation>
         </ChildSection>
       </ChildContainer>
