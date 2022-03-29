@@ -36,7 +36,9 @@ const Button = forwardRef<HTMLDivElement, PropsWithChildren<ButtonProps>>(
   ({ onClick, children, ...props }, ref) => (
     <WrapperButton ref={ref} onClick={onClick} {...props}>
       {children}
-      <ArrowSvg style={{ marginLeft: 8 }} />
+      <div style={{ marginLeft: 8, display: 'flex', alignItems: 'center' }}>
+        <ArrowSvg />
+      </div>
     </WrapperButton>
   )
 );
