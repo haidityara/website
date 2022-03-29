@@ -11,9 +11,9 @@ import RobotGalaxySection from 'sections/RobotGalaxySection';
 import TokenSection from 'sections/TokenSection';
 import WrappedTeamSection from 'sections/WrappedTeamSection';
 import RobotBottomSection from 'sections/RobotBottomSection';
+import Footer from 'components/Footer';
 
 const App = () => (
-  //   <Suspense fallback={<LoadingScreen />}>
   <ParallaxProvider>
     <div style={{ background: 'black' }}>
       <BeginSection />
@@ -28,10 +28,9 @@ const App = () => (
       <RoadmapSection />
       <PartnersSection />
       <RobotBottomSection />
-      <div style={{ height: '200vh' }} />
+      <Footer />
     </div>
   </ParallaxProvider>
-  //   </Suspense>
 );
 
 export default App;
