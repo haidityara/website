@@ -12,6 +12,9 @@ const RecruimentProcessSection = lazy(
 const WrappedTeamSection = lazy(() => import('sections/WrappedTeamSection'));
 const FlyWheelSection = lazy(() => import('sections/FlyWheelSection'));
 const TokenSection = lazy(() => import('sections/TokenSection'));
+const RoadmapSection = lazy(() => import('sections/RoadmapSection'));
+const PartnersSection = lazy(() => import('sections/PartnersSection'));
+const RobotBottomSection = lazy(() => import('sections/RobotBottomSection'));
 
 const App = () => (
   <Suspense fallback={<LoadingScreen />}>
@@ -25,6 +28,9 @@ const App = () => (
         <RobotGalaxySection />
         <WrappedTeamSection />
         <FlyWheelSection />
+        <RoadmapSection />
+        <PartnersSection />
+        <RobotBottomSection />
         <div style={{ height: '200vh' }} />
       </div>
     </ParallaxProvider>
