@@ -14,7 +14,7 @@ const Wrapper = styled.div`
   width: calc(300px - 40px);
   height: 300px;
   position: relative;
-  padding: 0 20px;
+  padding: 0 38px;
 
   display: flex;
   justify-content: center;

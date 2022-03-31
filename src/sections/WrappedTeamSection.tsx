@@ -97,11 +97,8 @@ const WrappedTeamSection = () => (
             <ScrollAnimation animateOnce animateIn="fadeInLeft">
               <H3>Earn</H3>
               <Paragraph>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit
+                wTEAMs generate income through numerous P2E games and metaverses
+                of theirs & your choosing!
               </Paragraph>
             </ScrollAnimation>
           </div>
@@ -119,11 +116,8 @@ const WrappedTeamSection = () => (
             <ScrollAnimation animateOnce animateIn="fadeInLeft">
               <H3>Trade</H3>
               <Paragraph>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit
+                Purchase & Sell wTEAMs on our TEAM Marketplace! Find the best
+                player & pick up gems in TEAM DAO
               </Paragraph>
             </ScrollAnimation>
           </div>
@@ -145,11 +139,7 @@ const WrappedTeamSection = () => (
             <ScrollAnimation animateOnce animateIn="fadeInLeft">
               <H3>Develop</H3>
               <Paragraph>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit
+                Upgrade your wTEAM through player coaching and asset expansion
               </Paragraph>
             </ScrollAnimation>
           </div>

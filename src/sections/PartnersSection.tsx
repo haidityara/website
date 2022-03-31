@@ -74,9 +74,6 @@ const PartnersSection = () => (
             <Image src={imgShima} alt="partner" />
           </Item>
           <Item>
-            <Image src={imgShima} alt="partner" />
-          </Item>
-          <Item>
             <Image src={imgAlgorand} alt="partner" />
           </Item>
           <Item>

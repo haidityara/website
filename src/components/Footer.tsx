@@ -19,31 +19,6 @@ const FooterContainer = styled.div`
   color: white;
 `;
 
-const NavContainer = styled.div`
-  font-style: normal;
-  font-weight: 700;
-  font-size: 11px;
-  line-height: 13px;
-`;
-
-const LinkContainer = styled.div`
-  margin-top: 80px;
-  display: flex;
-  flex-wrap: wrap;
-  > div {
-    width: 20%;
-  }
-  h4 {
-    font-size: 20px;
-  }
-  p {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-    color: #989898;
-  }
-`;
-
 const ConnectContainer = styled.div`
   margin-top: 100px;
   display: flex;
@@ -67,44 +42,6 @@ const Divider = styled.div`
 
 const Footer = () => (
   <FooterContainer>
-    <NavContainer>
-      <A href="#">ABOUT US</A>
-      <A href="#">JOBS</A>
-      <A href="#">EVENTS</A>
-    </NavContainer>
-
-    <LinkContainer>
-      <div>
-        <h4>Development</h4>
-        <p>Lorem</p>
-        <p>Lorem</p>
-        <p>Lorem</p>
-      </div>
-      <div>
-        <h4>Development</h4>
-        <p>Lorem</p>
-        <p>Lorem</p>
-        <p>Lorem</p>
-      </div>
-      <div>
-        <h4>Development</h4>
-        <p>Lorem</p>
-        <p>Lorem</p>
-        <p>Lorem</p>
-      </div>
-      <div>
-        <h4>Development</h4>
-        <p>Lorem</p>
-        <p>Lorem</p>
-        <p>Lorem</p>
-      </div>
-      <div>
-        <h4>Development</h4>
-        <p>Lorem</p>
-        <p>Lorem</p>
-        <p>Lorem</p>
-      </div>
-    </LinkContainer>
     <ConnectContainer>
       <div>
         <A>Support</A>
@@ -121,16 +58,11 @@ const Footer = () => (
         <InstagramIcon />
       </SocialMediaContainer>
     </ConnectContainer>
+
     <Divider />
 
     <div>
       <Image src={imgLogo} alt="logo" />
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor
-        sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-        ut labore et dolore magna aliqua.
-      </p>
     </div>
   </FooterContainer>
 );

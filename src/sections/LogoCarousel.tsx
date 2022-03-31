@@ -1,5 +1,7 @@
+/* eslint-disable react/no-array-index-key */
 import Image from 'components/Image';
 import styled from 'styled-components';
+import Slider from 'react-slick';
 
 const cache: any = {};
 
@@ -15,13 +17,7 @@ importAll(require.context('public/assets/logo/', false, /\.(png|jpe?g|svg)$/));
 
 const images: any[] = Object.entries(cache).map((module) => module[1]);
 
-const ImageContainer = styled.div`
-  display: flex;
-  gap: 24px;
-`;
-
 const Container = styled.div`
-  display: flex;
   width: 100vw;
   overflow: hidden;
   margin-top: 135px;
@@ -29,13 +25,29 @@ const Container = styled.div`
 
 const LogoCarousel = () => (
   <Container>
-    <ImageContainer>
-      {images.map((e) => (
-        <div key={e} style={{ width: 85, height: 85 }}>
+    <Slider
+      infinite
+      dots={false}
+      arrows={false}
+      autoplay
+      slidesToShow={10}
+      slidesToScroll={5}
+      centerMode
+      responsive={[
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 10
+          }
+        }
+      ]}
+    >
+      {images.map((e, idx) => (
+        <div key={`${e}-${idx}`}>
           <Image src={e} alt="logo" />
         </div>
       ))}
-    </ImageContainer>
+    </Slider>
   </Container>
 );
 

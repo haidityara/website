@@ -46,9 +46,9 @@ const RecruimentProcessSection = () => (
         </div>
       </NumberContainer>
       <TagContainer>
-        <HexagonTag>Iniciate / Recruit</HexagonTag>
-        <HexagonTag>Gamified Training</HexagonTag>
-        <HexagonTag>Scholar</HexagonTag>
+        <HexagonTag>MERITOCRATIC RECRUITMENT</HexagonTag>
+        <HexagonTag>GAME-ENABLED TRAINING SYSTEM</HexagonTag>
+        <HexagonTag>LIFETIME COMMUNITY COACHING</HexagonTag>
       </TagContainer>
     </div>
     <BlurredCircle left="94vw" top={100} />
