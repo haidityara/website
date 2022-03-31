@@ -15,7 +15,7 @@ import Footer from 'components/Footer';
 
 const App = () => (
   <ParallaxProvider>
-    <div style={{ background: 'black' }}>
+    <div style={{ background: 'black', overflowX: 'hidden' }}>
       <BeginSection />
       <AboutSection />
       <RecruimentProcessSection />

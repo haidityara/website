@@ -28,15 +28,25 @@ const Container = styled.div`
       position: relative;
     }
   }
+
+  @media (max-width: 768px) {
+    padding-top: 300px;
+
+    h4 {
+      display: block;
+    }
+  }
 `;
 
 const Columns = styled.div`
   display: flex;
   gap: 40px;
   margin-top: 85px;
+  flex-wrap: wrap;
 
   > div {
     flex: 1;
+    min-width: 300px;
   }
 `;
 
@@ -56,7 +66,7 @@ const TokenSection = () => (
     >
       <Image src={imgRocket} alt="rocket" className="teamdao-shake" />
     </Parallax>
-    <H2 style={{ width: 680 }}>TEAM Value Creation</H2>
+    <H2 style={{ maxWidth: 680 }}>TEAM Value Creation</H2>
 
     <Columns>
       <div>

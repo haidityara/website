@@ -28,20 +28,27 @@ const BeginSectionContainer = styled.div`
   margin: auto;
   display: flex;
   align-items: center;
-  min-height: 578px;
+  min-height: 800px;
   justify-content: space-between;
+  flex-wrap: wrap;
+
+  > div:first-child {
+    display: flex;
+    flex-direction: column;
+    width: 401px;
+    @media (max-width: 768px) {
+      align-items: center;
+    }
+  }
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
 `;
 
 const AboutSection = () => (
   <BgContainer>
     <BeginSectionContainer id="about-us">
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          width: 401
-        }}
-      >
+      <div>
         <H2>About TEAM</H2>
         <Paragraph style={{ marginTop: 24, width: 260 }}>
           TEAM™ has a proprietary scalable solution for guild management
@@ -85,7 +92,7 @@ const AboutSection = () => (
                 <Image src={imgFragment3} alt="" />
               </div>
             </Parallax>
-            <div style={{ width: 300, height: 10, visibility: 'hidden' }} />
+            <div style={{ width: 300, height: 500, visibility: 'hidden' }} />
           </div>
         </Parallax>
       </ScrollAnimation>

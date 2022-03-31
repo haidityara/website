@@ -36,6 +36,12 @@ const BigGlowText = styled.h2`
   color: #00ff19;
   text-shadow: 0px 0px 20px rgba(0, 255, 25, 0.9);
   margin-top: 0;
+  word-break: break-word;
+
+  @media (max-width: 768px) {
+    font-size: 3rem;
+    line-height: 0.9;
+  }
 `;
 
 const ImgContainer = styled.div`

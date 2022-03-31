@@ -35,9 +35,15 @@ const LogoCarousel = () => (
       centerMode
       responsive={[
         {
-          breakpoint: 1024,
+          breakpoint: 960,
           settings: {
-            slidesToShow: 10
+            slidesToShow: 8
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 6
           }
         }
       ]}

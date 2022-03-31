@@ -17,6 +17,12 @@ export const H2 = styled.h2`
   background-clip: text;
   text-fill-color: transparent;
   letter-spacing: -0.01em;
+  word-break: break-word;
+
+  @media (max-width: 768px) {
+    font-size: 2.5rem;
+    line-height: 0.9;
+  }
 `;
 
 export const H3 = styled(H2).attrs(() => ({
@@ -25,6 +31,11 @@ export const H3 = styled(H2).attrs(() => ({
   font-weight: 700;
   font-size: 52px;
   line-height: 46px;
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    line-height: 0.9;
+  }
 `;
 
 export const H4 = styled(H2).attrs(() => ({
@@ -33,6 +44,11 @@ export const H4 = styled(H2).attrs(() => ({
   font-weight: 700;
   font-size: 35px;
   line-height: 40px;
+
+  @media (max-width: 768px) {
+    font-size: 1.7rem;
+    line-height: 0.9;
+  }
 `;
 
 export const Paragraph = styled.p`

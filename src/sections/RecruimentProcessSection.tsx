@@ -20,6 +20,13 @@ const TagContainer = styled.div`
   min-height: 435px;
   align-items: center;
   transform: translateX(144px);
+
+  @media (max-width: 768px) {
+    transform: none;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
 `;
 
 const NumberContainer = styled.div`
@@ -28,11 +35,27 @@ const NumberContainer = styled.div`
   left: 0;
   display: flex;
   align-items: center;
+
+  @media (max-width: 768px) {
+    transform: none;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+
+    > div {
+      margin: 0 !important;
+      width: 100px;
+    }
+  }
 `;
 
 const RecruimentProcessSection = () => (
   <Container>
-    <H3 style={{ width: 562 }}>Automated and scalable recruitment process</H3>
+    <H3 style={{ maxWidth: 562 }}>
+      Automated and scalable recruitment process
+    </H3>
     <div style={{ position: 'relative', marginTop: 36 }}>
       <NumberContainer>
         <div>

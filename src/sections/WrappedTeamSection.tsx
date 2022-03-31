@@ -25,14 +25,15 @@ const Container = styled.div`
 `;
 
 const SubContainer = styled.div`
-  width: 65%;
+  width: 80%;
   marign: auto;
   h3 {
-    width: 480px;
+    max-width: 480px;
   }
   > div {
     width: 100%;
     margin-top: 81px;
+    text-align: center;
   }
 `;
 
@@ -48,7 +49,13 @@ const ChildSection = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  // flex-wrap: wrap;
   gap: 150px;
+
+  @media (max-width: 768px) {
+    gap: 50px;
+  }
+
   img {
     width: 550px;
   }
@@ -77,12 +84,19 @@ const BigGlowText = styled.h2`
   color: #00ff19;
   text-shadow: 0px 0px 20px rgba(0, 255, 25, 0.9);
   margin-top: 156px;
+
+  @media (max-width: 768px) {
+    font-size: 3rem;
+    line-height: 0.9;
+  }
 `;
 
 const WrappedTeamSection = () => (
   <Container>
     <SubContainer>
-      <H3>WRAPPED TEAM (wTEAM) VALUE CHAIN</H3>
+      <H3 style={{ maxWidth: '60%', margin: 'auto' }}>
+        WRAPPED TEAM (wTEAM) VALUE CHAIN
+      </H3>
       <div>
         <Image objectFit="contain" src={imgValueChain} alt="" />
       </div>

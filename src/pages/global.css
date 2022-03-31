@@ -73,6 +73,14 @@ body {
   background-color: black;
 }
 
+body[data-scroll-lock='true'] {
+  overflow-y: hidden;
+}
+
+body[data-scroll-lock='false'] {
+  overflow-y: auto;
+}
+
 body::-webkit-scrollbar {
   width: 4px;
   background-color: black;
@@ -81,7 +89,7 @@ body::-webkit-scrollbar-thumb {
   background-color: #00ff19;
 }
 body::-webkit-scrollbar-track {
-  background-color: rgba(0,0,0,0.15);
+  background-color: rgba(0, 0, 0, 0.15);
 }
 
 .teamdao-pulse {

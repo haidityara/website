@@ -33,6 +33,10 @@ const SubContainer = styled.div`
     width: 100%;
     margin-top: 81px;
   }
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+  }
 `;
 
 const ParagraphContainer = styled.div`
@@ -49,6 +53,16 @@ const ButtonContainer = styled.div`
   max-width: 350px;
   svg {
     display: none;
+  }
+
+  > div {
+    width: unset;
+    flex: 1;
+
+    @media (max-width: 768px) {
+      padding-left: 2px;
+      padding-right: 2px;
+    }
   }
 `;
 
@@ -100,31 +114,29 @@ const FlyWheelSection = () => {
   return (
     <Container>
       <SubContainer>
-        <div style={{ width: 350 }}>
-          <Parallax translateY={[10, -10]}>
-            <H2>$TEAM FLYWHEEL</H2>
-            <ButtonContainer>
-              <Button onClick={() => handleSelect(0)} isActive={selected === 0}>
-                PLAYERS
-              </Button>
-              <Button onClick={() => handleSelect(1)} isActive={selected === 1}>
-                OWNERS
-              </Button>
-              <Button onClick={() => handleSelect(2)} isActive={selected === 2}>
-                ASSETS
-              </Button>
-            </ButtonContainer>
-            <ParagraphContainer style={{ marginTop: 50 }}>
-              <H4>{data.title}</H4>
-              <Paragraph>
-                <ul>
-                  {data.content.map((e) => (
-                    <li key={e}>{e}</li>
-                  ))}
-                </ul>
-              </Paragraph>
-            </ParagraphContainer>
-          </Parallax>
+        <div style={{ maxWidth: 350, height: 400 }}>
+          <H2>$TEAM FLYWHEEL</H2>
+          <ButtonContainer>
+            <Button onClick={() => handleSelect(0)} isActive={selected === 0}>
+              PLAYERS
+            </Button>
+            <Button onClick={() => handleSelect(1)} isActive={selected === 1}>
+              OWNERS
+            </Button>
+            <Button onClick={() => handleSelect(2)} isActive={selected === 2}>
+              ASSETS
+            </Button>
+          </ButtonContainer>
+          <ParagraphContainer style={{ marginTop: 50 }}>
+            <H4>{data.title}</H4>
+            <Paragraph>
+              <ul>
+                {data.content.map((e) => (
+                  <li key={e}>{e}</li>
+                ))}
+              </ul>
+            </Paragraph>
+          </ParagraphContainer>
         </div>
 
         <div style={{ position: 'relative' }}>

@@ -24,6 +24,12 @@ const Wrapper = styled.div`
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+    width: 150px;
+    height: 200px;
+  }
 `;
 
 interface ButtonProps extends HTMLAttributes<HTMLDivElement> {

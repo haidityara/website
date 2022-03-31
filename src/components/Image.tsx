@@ -1,5 +1,9 @@
-import NextImage, { ImageProps } from 'next/image';
+import NextImage, { ImageLoaderProps, ImageProps } from 'next/image';
 
-const Image = (props: ImageProps) => <NextImage {...props} quality={100} />;
+const myLoader = ({ src }: ImageLoaderProps) => `${src}`;
+
+const Image = (props: ImageProps) => (
+  <NextImage {...props} quality={100} loader={myLoader} />
+);
 
 export default Image;

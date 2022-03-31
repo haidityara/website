@@ -6,6 +6,12 @@ export default function Document() {
     <Html>
       <Head>
         <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/round-team-logo.png"
+        />
+        <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
         />

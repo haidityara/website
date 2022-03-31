@@ -23,6 +23,21 @@ const ConnectContainer = styled.div`
   margin-top: 100px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    > div:first-child {
+      width: 100%;
+      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      > a {
+        margin-bottom: 20px;
+        width: 50%;
+        margin-right: 0;
+      }
+    }
+  }
 `;
 
 const SocialMediaContainer = styled.div`
@@ -30,6 +45,12 @@ const SocialMediaContainer = styled.div`
   justify-content: center;
   align-items: center;
   gap: 24px;
+
+  @media (max-width: 768px) {
+    margin-top: 40px;
+    width: 100%;
+    justify-content: space-between;
+  }
 `;
 
 const Divider = styled.div`
