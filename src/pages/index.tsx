@@ -12,25 +12,50 @@ import TokenSection from 'sections/TokenSection';
 import WrappedTeamSection from 'sections/WrappedTeamSection';
 import RobotBottomSection from 'sections/RobotBottomSection';
 import Footer from 'components/Footer';
+import LoadingScreen from 'sections/LoadingScreen';
+import { useEffect, useState } from 'react';
 
-const App = () => (
-  <ParallaxProvider>
-    <div style={{ background: 'black', overflowX: 'hidden' }}>
-      <BeginSection />
-      <AboutSection />
-      <RecruimentProcessSection />
-      <TokenSection />
-      <MetaverseSection />
-      <LogoCarousel />
-      <RobotGalaxySection />
-      <WrappedTeamSection />
-      <FlyWheelSection />
-      <RoadmapSection />
-      <PartnersSection />
-      <RobotBottomSection />
-      <Footer />
-    </div>
-  </ParallaxProvider>
-);
+const App = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    document.onreadystatechange = () => {
+      setTimeout(() => {
+        setLoading(document.readyState !== 'complete');
+      }, 1000);
+    };
+  }, []);
+
+  return (
+    <>
+      <div style={{ display: !loading ? 'none' : 'block' }}>
+        <LoadingScreen />
+      </div>
+      <ParallaxProvider>
+        <div
+          style={{
+            background: 'black',
+            overflowX: 'hidden',
+            display: loading ? 'none' : 'block'
+          }}
+        >
+          <BeginSection />
+          <AboutSection />
+          <RecruimentProcessSection />
+          <TokenSection />
+          <MetaverseSection />
+          <LogoCarousel />
+          <RobotGalaxySection />
+          <WrappedTeamSection />
+          <FlyWheelSection />
+          <RoadmapSection />
+          <PartnersSection />
+          <RobotBottomSection />
+          <Footer />
+        </div>
+      </ParallaxProvider>
+    </>
+  );
+};
 
 export default App;

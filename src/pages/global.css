@@ -109,3 +109,9 @@ body::-webkit-scrollbar-track {
   animation: teamdao-shake-anim 0.2s;
   animation-iteration-count: infinite;
 }
+
+.teamdao-flash {
+  animation-name: flash;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}

@@ -54,9 +54,9 @@ const BeginSection = () => (
   <BeginSectionContainer>
     <Header />
     <ImgContainer style={{ marginTop: 100 }}>
-      <ScrollAnimation animateIn="flash" animateOnce>
+      <div className="teamdao-flash">
         <Image className="teamdao-pulse" src={Robot1} alt="" />
-      </ScrollAnimation>
+      </div>
     </ImgContainer>
     <div style={{ width: '80%', margin: 'auto' }}>
       <BigGlowText>$TEAM up with the metaverse’s first Guild 3.0</BigGlowText>
