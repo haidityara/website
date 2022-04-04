@@ -5,11 +5,13 @@ import imgEarn from 'public/assets/wrapped-team-earn.png';
 import imgTrade from 'public/assets/wrapped-team-trade.png';
 import imgDevelop from 'public/assets/wrapped-team-develop.png';
 import imgEarth from 'public/assets/earth.png';
+import bgLazy from 'public/assets/background-galaxy-lazy.png';
 import ScrollAnimation from 'react-animate-on-scroll';
 import Image from 'components/Image';
+import useProgressiveImage from 'src/hooks/useProgressiveImage';
 
-const EarthBG = styled.div`
-  background: url(${imgEarth.src});
+const EarthBG = styled.div<{ bgImage: string }>`
+  background: url(${({ bgImage }) => bgImage});
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -91,84 +93,87 @@ const BigGlowText = styled.h2`
   }
 `;
 
-const WrappedTeamSection = () => (
-  <Container>
-    <SubContainer>
-      <H3 style={{ maxWidth: '60%', margin: 'auto' }}>
-        WRAPPED TEAM (wTEAM) VALUE CHAIN
-      </H3>
-      <div>
-        <Image objectFit="contain" src={imgValueChain} alt="" />
-      </div>
-    </SubContainer>
+const WrappedTeamSection = () => {
+  const bgImage = useProgressiveImage(imgEarth.src, bgLazy.src);
+  return (
+    <Container>
+      <SubContainer>
+        <H3 style={{ maxWidth: '60%', margin: 'auto' }}>
+          WRAPPED TEAM (wTEAM) VALUE CHAIN
+        </H3>
+        <div>
+          <Image objectFit="contain" src={imgValueChain} alt="" />
+        </div>
+      </SubContainer>
 
-    <BigGlowText>What can i do with a Wrapped Team?</BigGlowText>
+      <BigGlowText>What can i do with a Wrapped Team?</BigGlowText>
 
-    <EarthBG>
-      <ChildContainer>
-        <ChildSection>
-          <div>
-            <ScrollAnimation animateOnce animateIn="fadeInLeft">
-              <H3>Earn</H3>
-              <Paragraph>
-                wTEAMs generate income through numerous P2E games and metaverses
-                of theirs & your choosing!
-              </Paragraph>
+      <EarthBG bgImage={bgImage}>
+        <ChildContainer>
+          <ChildSection>
+            <div>
+              <ScrollAnimation animateOnce animateIn="fadeInLeft">
+                <H3>Earn</H3>
+                <Paragraph>
+                  wTEAMs generate income through numerous P2E games and
+                  metaverses of theirs & your choosing!
+                </Paragraph>
+              </ScrollAnimation>
+            </div>
+            <ScrollAnimation animateOnce animateIn="fadeInRight">
+              <Image
+                src={imgEarn}
+                objectFit="contain"
+                alt="earn"
+                className="teamdao-pulse"
+              />
             </ScrollAnimation>
-          </div>
-          <ScrollAnimation animateOnce animateIn="fadeInRight">
-            <Image
-              src={imgEarn}
-              objectFit="contain"
-              alt="earn"
-              className="teamdao-pulse"
-            />
-          </ScrollAnimation>
-        </ChildSection>
-        <ChildSection>
-          <div>
-            <ScrollAnimation animateOnce animateIn="fadeInLeft">
-              <H3>Trade</H3>
-              <Paragraph>
-                Purchase & Sell wTEAMs on our TEAM Marketplace! Find the best
-                player & pick up gems in TEAM DAO
-              </Paragraph>
+          </ChildSection>
+          <ChildSection>
+            <div>
+              <ScrollAnimation animateOnce animateIn="fadeInLeft">
+                <H3>Trade</H3>
+                <Paragraph>
+                  Purchase & Sell wTEAMs on our TEAM Marketplace! Find the best
+                  player & pick up gems in TEAM DAO
+                </Paragraph>
+              </ScrollAnimation>
+            </div>
+            <ScrollAnimation
+              animateOnce
+              animateIn="fadeInRight"
+              style={{ maxWidth: 'unset' }}
+            >
+              <Image
+                src={imgTrade}
+                objectFit="contain"
+                alt="trade"
+                className="teamdao-pulse"
+              />
             </ScrollAnimation>
-          </div>
-          <ScrollAnimation
-            animateOnce
-            animateIn="fadeInRight"
-            style={{ maxWidth: 'unset' }}
-          >
-            <Image
-              src={imgTrade}
-              objectFit="contain"
-              alt="trade"
-              className="teamdao-pulse"
-            />
-          </ScrollAnimation>
-        </ChildSection>
-        <ChildSection>
-          <div>
-            <ScrollAnimation animateOnce animateIn="fadeInLeft">
-              <H3>Develop</H3>
-              <Paragraph>
-                Upgrade your wTEAM through player coaching and asset expansion
-              </Paragraph>
+          </ChildSection>
+          <ChildSection>
+            <div>
+              <ScrollAnimation animateOnce animateIn="fadeInLeft">
+                <H3>Develop</H3>
+                <Paragraph>
+                  Upgrade your wTEAM through player coaching and asset expansion
+                </Paragraph>
+              </ScrollAnimation>
+            </div>
+            <ScrollAnimation animateOnce animateIn="fadeInRight">
+              <Image
+                src={imgDevelop}
+                objectFit="contain"
+                alt="develop"
+                className="teamdao-pulse"
+              />
             </ScrollAnimation>
-          </div>
-          <ScrollAnimation animateOnce animateIn="fadeInRight">
-            <Image
-              src={imgDevelop}
-              objectFit="contain"
-              alt="develop"
-              className="teamdao-pulse"
-            />
-          </ScrollAnimation>
-        </ChildSection>
-      </ChildContainer>
-    </EarthBG>
-  </Container>
-);
+          </ChildSection>
+        </ChildContainer>
+      </EarthBG>
+    </Container>
+  );
+};
 
 export default WrappedTeamSection;

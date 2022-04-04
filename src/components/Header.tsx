@@ -25,6 +25,28 @@ const NavContainer = styled.div`
     color: #ffffff;
   }
 
+  &[data-toggle='false'] {
+    a {
+      position: relative;
+      &:before {
+        position: absolute;
+        bottom: -4px;
+        content: '';
+        width: 0px;
+        height: 4px;
+        background: #00ff19;
+        transition: all 0.2s ease;
+      }
+
+      &:hover {
+        &:before {
+          width: 100%;
+          transition: all 0.2s ease;
+        }
+      }
+    }
+  }
+
   @media (max-width: 768px) {
     display: none;
     position: fixed;
@@ -70,7 +92,9 @@ const Header = () => {
 
   return (
     <HeaderContainer>
-      <Image src={imgLogo} alt="logo" />
+      <a href="/">
+        <Image src={imgLogo} alt="logo" />
+      </a>
 
       <NavContainer data-toggle={isOpen}>
         <a onClick={() => setOpen(false)} href="#about-us">
@@ -78,10 +102,10 @@ const Header = () => {
         </a>
         <a href="#token">Token</a>
         <a href="#road-map">Roadmap</a>
-        <a href="#white-paper">Whitepaper</a>
-        <a href="#marketplace">Marketplace</a>
-        <a href="#add">Add TEAM TOKEN</a>
-        <a href="#connect">Connect</a>
+        <a href="https://whitepaper.teamdao.com/">Whitepaper</a>
+        <a href="/coming-soon">Marketplace</a>
+        <a href="/coming-soon">Add TEAM TOKEN</a>
+        <a href="/coming-soon">Connect</a>
         <GlobeIcon />
       </NavContainer>
 

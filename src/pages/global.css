@@ -73,6 +73,10 @@ body {
   background-color: black;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body[data-scroll-lock='true'] {
   overflow-y: hidden;
 }

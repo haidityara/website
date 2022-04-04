@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 import Header from 'components/Header';
 import Bg1 from 'public/assets/bg1.png';
+import Bg1Lazy from 'public/assets/bg1-lazy.png';
 import Robot1 from 'public/assets/robot1.png';
 import CircleDown from 'public/assets/circle-down.png';
 import Image from 'components/Image';
-import ScrollAnimation from 'react-animate-on-scroll';
+import useProgressiveImage from 'src/hooks/useProgressiveImage';
 
-const BeginSectionContainer = styled.div`
+const BeginSectionContainer = styled.div<{ bgImage: string }>`
   background-image: linear-gradient(
       180deg,
       rgba(0, 0, 0, 0) 0%,
@@ -14,7 +15,7 @@ const BeginSectionContainer = styled.div`
       rgba(0, 0, 0, 0) 58.51%,
       #000000 90.91%
     ),
-    url(${Bg1.src});
+    url(${({ bgImage }) => bgImage});
   min-height: 100vh;
   background-position: center;
   background-color: black;
@@ -50,27 +51,31 @@ const ImgContainer = styled.div`
   width: 100%;
 `;
 
-const BeginSection = () => (
-  <BeginSectionContainer>
-    <Header />
-    <ImgContainer style={{ marginTop: 100 }}>
-      <div className="teamdao-flash">
-        <Image className="teamdao-pulse" src={Robot1} alt="" />
-      </div>
-    </ImgContainer>
-    <div style={{ width: '80%', margin: 'auto' }}>
-      <BigGlowText>$TEAM up with the metaverse’s first Guild 3.0</BigGlowText>
-    </div>
+const BeginSection = () => {
+  const bgImage = useProgressiveImage(Bg1.src, Bg1Lazy.src);
 
-    <ImgContainer style={{ height: 100 }}>
-      <Image
-        className="teamdao-pulse-delay"
-        objectFit="contain"
-        src={CircleDown}
-        alt=""
-      />
-    </ImgContainer>
-  </BeginSectionContainer>
-);
+  return (
+    <BeginSectionContainer bgImage={bgImage}>
+      <Header />
+      <ImgContainer style={{ marginTop: 100 }}>
+        <div className="teamdao-flash">
+          <Image className="teamdao-pulse" src={Robot1} alt="" />
+        </div>
+      </ImgContainer>
+      <div style={{ width: '80%', margin: 'auto' }}>
+        <BigGlowText>$TEAM up with the metaverse’s first Guild 3.0</BigGlowText>
+      </div>
+
+      <ImgContainer style={{ height: 100 }}>
+        <Image
+          className="teamdao-pulse-delay"
+          objectFit="contain"
+          src={CircleDown}
+          alt=""
+        />
+      </ImgContainer>
+    </BeginSectionContainer>
+  );
+};
 
 export default BeginSection;

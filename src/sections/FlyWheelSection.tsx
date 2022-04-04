@@ -4,13 +4,15 @@ import imgSteamFlyWheel from 'public/assets/fly-wheel.png';
 import imgSteamFlyWheelToken from 'public/assets/fly-wheel-token.png';
 import Button from 'components/Button';
 import imgCloud from 'public/assets/cloud.png';
+import bgLazy from 'public/assets/background-galaxy-lazy.png';
 import { Parallax } from 'react-scroll-parallax';
 import { useEffect, useState, useRef } from 'react';
 import Image from 'components/Image';
+import useProgressiveImage from 'src/hooks/useProgressiveImage';
 
-const Container = styled.div`
+const Container = styled.div<{ bgImage: string }>`
   margin-top: 50px;
-  background: url(${imgCloud.src});
+  background: url(${({ bgImage }) => bgImage});
   background-size: contain;
   background-position: right;
   background-repeat: no-repeat;
@@ -90,6 +92,7 @@ const infos = [
 ];
 
 const FlyWheelSection = () => {
+  const bgImage = useProgressiveImage(imgCloud.src, bgLazy.src);
   const [selected, setSelected] = useState(0);
   const intervalRef = useRef<any>(null);
 
@@ -112,7 +115,7 @@ const FlyWheelSection = () => {
   };
 
   return (
-    <Container>
+    <Container id="token" bgImage={bgImage}>
       <SubContainer>
         <div style={{ maxWidth: 350, height: 400 }}>
           <H2>$TEAM FLYWHEEL</H2>

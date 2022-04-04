@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import imgLoading from 'public/assets/animated-loader.gif';
+import imgLoading from 'public/assets/animated-loader-compressed.gif';
 import Image from 'components/Image';
 
 const Container = styled.div`
