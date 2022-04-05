@@ -41,6 +41,18 @@ const SubContainer = styled.div`
   }
 `;
 
+const StyledParallax = styled(Parallax)`
+  position: absolute;
+  bottom: 33%;
+  right: 35%;
+  z-index: 100;
+  width: 20%;
+
+  @media (min-width: 1024px) {
+    right: 38%;
+  }
+`;
+
 const ParagraphContainer = styled.div`
   max-width: 255px;
   h4 {
@@ -144,19 +156,9 @@ const FlyWheelSection = () => {
 
         <div style={{ position: 'relative' }}>
           <Parallax translateY={[-5, 5]}>
-            <Parallax
-              className="teamdao-pulse"
-              translateY={[-5, 5]}
-              style={{
-                position: 'absolute',
-                bottom: '28%',
-                right: '30%',
-                zIndex: 100,
-                width: '20%'
-              }}
-            >
+            <StyledParallax className="teamdao-pulse" translateY={[-5, 5]}>
               <Image src={imgSteamFlyWheelToken} alt="" objectFit="contain" />
-            </Parallax>
+            </StyledParallax>
             <Image src={imgSteamFlyWheel} alt="" objectFit="contain" />
           </Parallax>
         </div>

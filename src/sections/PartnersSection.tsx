@@ -6,7 +6,6 @@ import imgAnimoca from 'public/assets/partners/partners-animoca.png';
 import imgKrust from 'public/assets/partners/partners-krust.png';
 import imgShima from 'public/assets/partners/partners-shima.png';
 import imgAlgorand from 'public/assets/partners/partners-algorand.png';
-import imgLibra from 'public/assets/partners/partners-libra.png';
 import imgNexo from 'public/assets/partners/partners-nexo.png';
 import imgGsr from 'public/assets/partners/partners-gsr.png';
 import imgExcap from 'public/assets/partners/partners-excapital.png';
@@ -14,7 +13,10 @@ import imgBp from 'public/assets/partners/partners-bridgeport.png';
 import imgOctava from 'public/assets/partners/partners-octava.png';
 import imgAntiFund from 'public/assets/partners/partners-anti-fund.png';
 import imgEverseCapital from 'public/assets/partners/partners-everse-capital.png';
-
+import imgNGC from 'public/assets/partners/partners-ngc-ventures.png';
+import imgLibraCapitalVentures from 'public/assets/partners/partners-libra-capital-ventures.png';
+import imgRisingCap from 'public/assets/partners/partners-rising-cap.png';
+import imgGsg from 'public/assets/partners/partners-gsg.png';
 import imgReadWP from 'public/assets/whitepaper-container.png';
 import Button from 'components/Button';
 import Image from 'components/Image';
@@ -97,16 +99,16 @@ const PartnersSection = () => {
             </Item>
 
             <Item>
-              <Image src={imgLibra} alt="partner" />
+              <Image src={imgLibraCapitalVentures} alt="partner" />
             </Item>
             <Item>
               <Image src={imgNexo} alt="partner" />
             </Item>
             <Item>
-              <H4>Ap3 Capital</H4>
+              <Image src={imgGsr} alt="partner" />
             </Item>
             <Item>
-              <Image src={imgGsr} alt="partner" />
+              <H4>Ap3 Capital</H4>
             </Item>
             <Item>
               <Image src={imgExcap} alt="partner" />
@@ -122,14 +124,14 @@ const PartnersSection = () => {
               <Image src={imgOctava} alt="partner" />
             </Item>
             <Item>
-              <H4>NGC Ventures</H4>
+              <Image src={imgNGC} alt="partner" />
             </Item>
             <Item>
-              <H4>Rising Cap</H4>
+              <Image src={imgRisingCap} alt="partner" />
             </Item>
 
             <Item>
-              <H4>GSG</H4>
+              <Image src={imgGsg} alt="partner" />
             </Item>
           </Columns>
 

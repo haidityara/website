@@ -14,7 +14,7 @@ const Body = styled.div`
 const ComingSoonPage = () => (
   <div>
     <Header />
-    <Body>Comming soon</Body>
+    <Body>Coming soon</Body>
     <Footer />
   </div>
 );

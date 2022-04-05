@@ -18,7 +18,7 @@ const NavContainer = styled.div`
   align-items: center;
   a {
     text-decoration: none;
-    font-family: 'Roboto';
+    font-family: 'Technology';
     font-style: normal;
     font-weight: 700;
     font-size: 16px;

@@ -11,10 +11,10 @@ const Wrapper = styled.div`
   text-align: center;
   letter-spacing: -0.01em;
   color: #414141;
-  width: calc(300px - 40px);
+  width: calc(300px - 70px);
   height: 300px;
   position: relative;
-  padding: 0 38px;
+  padding: 0 35px;
 
   display: flex;
   justify-content: center;
