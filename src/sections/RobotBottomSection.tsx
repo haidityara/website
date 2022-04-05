@@ -9,6 +9,7 @@ import imgFragment2 from 'public/assets/bottom-fragment2.png';
 import ScrollAnimation from 'react-animate-on-scroll';
 import Image from 'components/Image';
 import useProgressiveImage from 'src/hooks/useProgressiveImage';
+import ChervonLeft from 'public/assets/chervon-left.svg';
 
 const BgContainer = styled.div<{ bgImage: string }>`
   background: linear-gradient(
@@ -21,6 +22,32 @@ const BgContainer = styled.div<{ bgImage: string }>`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
+`;
+
+const InputContainer = styled.div`
+  position: relative;
+  svg {
+    margin-left: -24px;
+  }
+`;
+
+const Input = styled.input`
+  width: 400px;
+  height: 48px;
+  border: none;
+  outline: none;
+  color: #858585;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  background: #171717;
+  padding: 0 43px;
+  margin-top: 28px;
+
+  &:after {
+    content: '>';
+  }
 `;
 
 const BeginSectionContainer = styled.div`
@@ -84,6 +111,10 @@ const RobotGalaxySection = () => {
         <EmailContainer>
           <H3>Receive</H3>
           <H3>transmission</H3>
+          <InputContainer>
+            <Input placeholder="Your e-mail" />
+            <ChervonLeft />
+          </InputContainer>
         </EmailContainer>
       </BeginSectionContainer>
     </BgContainer>
