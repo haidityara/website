@@ -56,7 +56,7 @@ const Columns = styled.div`
   justify-content: space-around;
   align-items: center;
   > div {
-    width: 16%;
+    width: 20%;
 
     @media (max-width: 768px) {
       width: 20%;
@@ -89,15 +89,15 @@ const PartnersSection = () => {
               <Image src={imgKrust} alt="partner" />
             </Item>
             <Item>
-              <Image src={imgAntiFund} alt="partner" />
-            </Item>
-            <Item>
               <Image src={imgShima} alt="partner" />
             </Item>
             <Item>
-              <Image src={imgAlgorand} alt="partner" />
+              <Image src={imgAntiFund} alt="partner" />
             </Item>
 
+            <Item>
+              <Image src={imgAlgorand} alt="partner" />
+            </Item>
             <Item>
               <Image src={imgLibraCapitalVentures} alt="partner" />
             </Item>
@@ -107,18 +107,9 @@ const PartnersSection = () => {
             <Item>
               <Image src={imgGsr} alt="partner" />
             </Item>
-            <Item>
-              <H4>Ap3 Capital</H4>
-            </Item>
-            <Item>
-              <Image src={imgExcap} alt="partner" />
-            </Item>
 
             <Item>
-              <Image src={imgBp} alt="partner" />
-            </Item>
-            <Item>
-              <Image src={imgEverseCapital} alt="partner" />
+              <Image src={imgExcap} alt="partner" />
             </Item>
             <Item>
               <Image src={imgOctava} alt="partner" />
@@ -127,9 +118,9 @@ const PartnersSection = () => {
               <Image src={imgNGC} alt="partner" />
             </Item>
             <Item>
-              <Image src={imgRisingCap} alt="partner" />
+              <Image src={imgEverseCapital} alt="partner" />
             </Item>
-
+            
             <Item>
               <Image src={imgGsg} alt="partner" />
             </Item>
