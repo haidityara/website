@@ -72,6 +72,11 @@ const Item = styled.div`
   margin-bottom: 80px;
 `;
 
+const openInNewTab = (url: string) => {
+  const newWindow = (window as any).open(url, '_blank', 'noopener,noreferrer')
+  if (newWindow) newWindow.opener = null
+}
+
 const PartnersSection = () => {
   const bgImage = useProgressiveImage(imgBackground.src, imgBackgroundLazy.src);
   return (
@@ -150,8 +155,9 @@ const PartnersSection = () => {
                 ownership: TEAM retains 20% ownership of all assets purchased by
                 TEAM owners.
               </Paragraph>
-
-              <Button style={{ marginTop: 30 }}>Coming Soon</Button>
+              <a href="https://whitepaper.teamdao.com/" target="_blank">
+                < Button type = "diagonal" style={{ marginTop: 30 }}>Explore</Button>
+              </a>
             </div>
           </div>
         </Container>

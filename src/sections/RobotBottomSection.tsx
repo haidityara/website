@@ -32,7 +32,7 @@ const InputContainer = styled.div`
 `;
 
 const Input = styled.input`
-  width: 400px;
+  width: 250px;
   height: 48px;
   border: none;
   outline: none;

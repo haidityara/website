@@ -1,6 +1,7 @@
 import { forwardRef, HTMLAttributes, PropsWithChildren } from 'react';
 import styled from 'styled-components';
-import ArrowSvg from 'public/assets/arrow_down.svg';
+import DownArrowSvg from 'public/assets/arrow_down.svg';
+import ArrowSvg from 'public/assets/arrow.svg';
 
 const WrapperButton = styled.div<{ isActive?: boolean }>`
   color: #00ff19;
@@ -28,19 +29,23 @@ const WrapperButton = styled.div<{ isActive?: boolean }>`
 `;
 
 interface ButtonProps extends HTMLAttributes<HTMLDivElement> {
-  onClick?: () => void;
+  onClick?: any;
   isActive?: boolean;
+  type: string;
 }
 
 const Button = forwardRef<HTMLDivElement, PropsWithChildren<ButtonProps>>(
-  ({ onClick, children, ...props }, ref) => (
-    <WrapperButton ref={ref} onClick={onClick} {...props}>
-      {children}
-      <div style={{ marginLeft: 8, display: 'flex', alignItems: 'center' }}>
-        <ArrowSvg />
-      </div>
-    </WrapperButton>
-  )
+  ({ onClick, children, ...props }, ref) => {
+    const arrow = props.type === "down" ? <DownArrowSvg /> : <ArrowSvg />;
+    return (
+      <WrapperButton ref={ref} onClick={onClick} {...props}>
+        {children}
+        <div style={{ marginLeft: 8, display: 'flex', alignItems: 'center' }}>
+          {arrow}
+        </div>
+      </WrapperButton>
+    )
+  }
 );
 
 export default Button;
