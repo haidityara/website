@@ -108,7 +108,7 @@ const TokenSection = () => (
       <div>
         <ScrollAnimation animateOnce animateIn="fadeInUp">
           <Image src={imgToken3} alt="token" />
-          <H4>Fantasy eSports league for aspiring TEAM Owners</H4>
+          <H4>Fantasy eSports league for Owners</H4>
           <Paragraph>
             <ul>
               <li>
@@ -117,7 +117,7 @@ const TokenSection = () => (
               </li>
               <li>
                 Players and owners are empowered through flexible switching
-                between games & metaverses
+                between games
               </li>
             </ul>
           </Paragraph>

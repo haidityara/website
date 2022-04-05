@@ -149,9 +149,10 @@ const FlyWheelSection = () => {
               translateY={[-5, 5]}
               style={{
                 position: 'absolute',
-                bottom: '25%',
-                right: '40%',
-                zIndex: 100
+                bottom: '28%',
+                right: '30%',
+                zIndex: 100,
+                width: '20%'
               }}
             >
               <Image src={imgSteamFlyWheelToken} alt="" objectFit="contain" />

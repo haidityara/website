@@ -4,6 +4,7 @@ import imgLogo from 'public/assets/team-dao-logo.png';
 import GlobeIcon from 'public/assets/globe.svg';
 import Hamburger from 'hamburger-react';
 import { useEffect, useState } from 'react';
+import NextLink from 'next/link';
 
 const HeaderContainer = styled.div`
   display: flex;
@@ -97,15 +98,15 @@ const Header = () => {
       </a>
 
       <NavContainer data-toggle={isOpen}>
-        <a onClick={() => setOpen(false)} href="#about-us">
+        <a onClick={() => setOpen(false)} href="/#about-us">
           About us
         </a>
-        <a href="#token">Token</a>
-        <a href="#road-map">Roadmap</a>
-        <a href="https://whitepaper.teamdao.com/">Whitepaper</a>
-        <a href="/coming-soon">Marketplace</a>
-        <a href="/coming-soon">Add TEAM TOKEN</a>
-        <a href="/coming-soon">Connect</a>
+        <NextLink href="/#token">Token</NextLink>
+        <NextLink href="/#road-map">Roadmap</NextLink>
+        <NextLink href="https://whitepaper.teamdao.com/">Whitepaper</NextLink>
+        <NextLink href="/#road-map">Marketplace</NextLink>
+        <NextLink href="/coming-soon">Add TEAM TOKEN</NextLink>
+        <NextLink href="/coming-soon">Connect</NextLink>
         <GlobeIcon />
       </NavContainer>
 
