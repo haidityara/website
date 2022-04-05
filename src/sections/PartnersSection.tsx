@@ -132,6 +132,7 @@ const PartnersSection = () => {
             </div>
 
             <div
+              id="whitepaper"
               style={{
                 position: 'absolute',
                 width: 'calc(50% - 8%)',

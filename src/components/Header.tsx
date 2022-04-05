@@ -103,7 +103,7 @@ const Header = () => {
         </a>
         <NextLink href="/#token">Token</NextLink>
         <NextLink href="/#road-map">Roadmap</NextLink>
-        <NextLink href="https://whitepaper.teamdao.com/">Whitepaper</NextLink>
+        <NextLink href="/#whitepaper">Whitepaper</NextLink>
         <NextLink href="/#road-map">Marketplace</NextLink>
         <NextLink href="/coming-soon">Add TEAM TOKEN</NextLink>
         <NextLink href="/coming-soon">Connect</NextLink>

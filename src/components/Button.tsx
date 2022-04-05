@@ -1,6 +1,6 @@
 import { forwardRef, HTMLAttributes, PropsWithChildren } from 'react';
 import styled from 'styled-components';
-import ArrowSvg from 'public/assets/arrow.svg';
+import ArrowSvg from 'public/assets/arrow_down.svg';
 
 const WrapperButton = styled.div<{ isActive?: boolean }>`
   color: #00ff19;
