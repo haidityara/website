@@ -14,7 +14,7 @@ const FooterContainer = styled.div`
 `;
 
 const ConnectContainer = styled.div`
-  margin-top: 100px;
+  margin-top: 10px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -38,24 +38,19 @@ const Divider = styled.div`
   height: 1px;
   background: white;
   margin-top: 90px;
-  margin-bottom: 44px;
+  margin-bottom: 20px;
 `;
 
 const Footer = () => (
   <FooterContainer>
+    <Divider />
     <ConnectContainer>
-      <div />
+      <Image src={imgLogo} alt="logo" />
       <SocialMediaContainer>
         <TelegramIcon />
         <TwitterIcon />
       </SocialMediaContainer>
     </ConnectContainer>
-
-    <Divider />
-
-    <div>
-      <Image src={imgLogo} alt="logo" />
-    </div>
   </FooterContainer>
 );
 

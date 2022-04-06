@@ -9,7 +9,8 @@ import imgFragment2 from 'public/assets/bottom-fragment2.png';
 import ScrollAnimation from 'react-animate-on-scroll';
 import Image from 'components/Image';
 import useProgressiveImage from 'src/hooks/useProgressiveImage';
-import ChervonLeft from 'public/assets/chervon-left.svg';
+import { data } from '../constants/Common';
+import ChervonLeft from 'public/assets/chervon-left.svg'; 
 
 const BgContainer = styled.div<{ bgImage: string }>`
   background: linear-gradient(
@@ -28,7 +29,8 @@ const InputContainer = styled.div`
   position: relative;
   svg {
     margin-left: -24px;
-  }
+  };
+  white-space: nowrap;
 `;
 
 const Input = styled.input`
@@ -67,7 +69,7 @@ const EmailContainer = styled.div`
 
 const RobotGalaxySection = () => {
   const bgImage = useProgressiveImage(bgBottom.src, bgBottomLazy.src);
-
+  const buttonStyle = { marginTop: 50, width: 25, border: "none" , cursor: "pointer", background: "#171717", height: "48px"};
   return (
     <BgContainer bgImage={bgImage}>
       <BeginSectionContainer>
@@ -111,10 +113,14 @@ const RobotGalaxySection = () => {
         <EmailContainer>
           <H3>Receive</H3>
           <H3>transmission</H3>
-          <InputContainer>
-            <Input placeholder="Your e-mail" />
-            <ChervonLeft />
-          </InputContainer>
+          <form className='gform' method="POST" action={data.EMAIL_FORM_ACTION} data-email={data.EMAIL_FORM_RECEIVER}>
+            <InputContainer>
+              <Input type="email" name='email' placeholder="Your e-mail" />
+              <button type="submit" style={buttonStyle}>
+                <ChervonLeft style={{ marginLeft: 0 }} />
+              </button>
+            </InputContainer>
+          </form>
         </EmailContainer>
       </BeginSectionContainer>
     </BgContainer>

@@ -29,6 +29,56 @@ const NavContainer = styled.div`
   &[data-toggle='false'] {
     a {
       position: relative;
+      &#marketplace_header {
+        &:after{
+          content:'MARKETPLACE';
+        }
+        &:hover {
+          &:after{
+            content:'COMING SOON';
+          }
+        }
+      }
+      &#teamToken_header {
+        &:after{
+          content:'ADD TEAM TOKEN';
+        }
+        &:hover {
+          &:after{
+            content:'COMING SOON';
+          }
+        }
+      }
+      &#marketplace_header {
+        &:after{
+          content:'MARKETPLACE';
+        }
+        &:hover {
+          &:after{
+            content:'COMING SOON';
+          }
+        }
+      }
+      &#teamToken_header {
+        &:after{
+          content:'ADD TEAM TOKEN';
+        }
+        &:hover {
+          &:after{
+            content:'COMING SOON';
+          }
+        }
+      }
+      &#connect_header {
+        &:after{
+          content:'CONNECT';
+        }
+        &:hover {
+          &:after{
+            content:'COMING SOON';
+          }
+        }
+      }
       &:before {
         position: absolute;
         bottom: -4px;
@@ -104,10 +154,10 @@ const Header = () => {
         <NextLink href="/#token">Token</NextLink>
         <NextLink href="/#road-map">Roadmap</NextLink>
         <NextLink href="/#whitepaper">Whitepaper</NextLink>
-        <NextLink href="/#road-map">Marketplace</NextLink>
-        <NextLink href="/coming-soon">Add TEAM TOKEN</NextLink>
-        <NextLink href="/coming-soon">Connect</NextLink>
-        <GlobeIcon />
+        <a id='marketplace_header' href="/#"></a>
+        <a id='teamToken_header' href="/#"></a>
+        <a id='connect_header' href="/#"></a>
+        {/* <GlobeIcon /> */}
       </NavContainer>
 
       <HamburgerContainer>
