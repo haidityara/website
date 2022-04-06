@@ -9,13 +9,11 @@ import imgAlgorand from 'public/assets/partners/partners-algorand.png';
 import imgNexo from 'public/assets/partners/partners-nexo.png';
 import imgGsr from 'public/assets/partners/partners-gsr.png';
 import imgExcap from 'public/assets/partners/partners-excapital.png';
-import imgBp from 'public/assets/partners/partners-bridgeport.png';
 import imgOctava from 'public/assets/partners/partners-octava.png';
 import imgAntiFund from 'public/assets/partners/partners-anti-fund.png';
 import imgEverseCapital from 'public/assets/partners/partners-everse-capital.png';
 import imgNGC from 'public/assets/partners/partners-ngc-ventures.png';
 import imgLibraCapitalVentures from 'public/assets/partners/partners-libra-capital-ventures.png';
-import imgRisingCap from 'public/assets/partners/partners-rising-cap.png';
 import imgGsg from 'public/assets/partners/partners-gsg.png';
 import imgReadWP from 'public/assets/whitepaper-container.png';
 import Button from 'components/Button';
@@ -72,11 +70,6 @@ const Item = styled.div`
   margin-bottom: 80px;
 `;
 
-const openInNewTab = (url: string) => {
-  const newWindow = (window as any).open(url, '_blank', 'noopener,noreferrer')
-  if (newWindow) newWindow.opener = null
-}
-
 const PartnersSection = () => {
   const bgImage = useProgressiveImage(imgBackground.src, imgBackgroundLazy.src);
   return (
@@ -125,7 +118,7 @@ const PartnersSection = () => {
             <Item>
               <Image src={imgEverseCapital} alt="partner" />
             </Item>
-            
+
             <Item>
               <Image src={imgGsg} alt="partner" />
             </Item>
@@ -155,9 +148,13 @@ const PartnersSection = () => {
                 ownership: TEAM retains 20% ownership of all assets purchased by
                 TEAM owners.
               </Paragraph>
-              <a href="https://whitepaper.teamdao.com/" target="_blank">
-                < Button type = "diagonal" style={{ marginTop: 30 }}>Explore</Button>
-              </a>
+              <Button
+                type="diagonal"
+                style={{ marginTop: 30 }}
+                onClick={() => window.open('https://whitepaper.teamdao.com/')}
+              >
+                Explore
+              </Button>
             </div>
           </div>
         </Container>

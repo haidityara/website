@@ -1,7 +1,8 @@
+/* eslint-disable jsx-a11y/control-has-associated-label */
+/* eslint-disable jsx-a11y/anchor-has-content */
 import Image from 'components/Image';
 import styled from 'styled-components';
 import imgLogo from 'public/assets/team-dao-logo.png';
-import GlobeIcon from 'public/assets/globe.svg';
 import Hamburger from 'hamburger-react';
 import { useEffect, useState } from 'react';
 import NextLink from 'next/link';
@@ -30,52 +31,52 @@ const NavContainer = styled.div`
     a {
       position: relative;
       &#marketplace_header {
-        &:after{
-          content:'MARKETPLACE';
+        &:after {
+          content: 'MARKETPLACE';
         }
         &:hover {
-          &:after{
-            content:'COMING SOON';
+          &:after {
+            content: 'COMING SOON';
           }
         }
       }
       &#teamToken_header {
-        &:after{
-          content:'ADD TEAM TOKEN';
+        &:after {
+          content: 'ADD TEAM TOKEN';
         }
         &:hover {
-          &:after{
-            content:'COMING SOON';
+          &:after {
+            content: 'COMING SOON';
           }
         }
       }
       &#marketplace_header {
-        &:after{
-          content:'MARKETPLACE';
+        &:after {
+          content: 'MARKETPLACE';
         }
         &:hover {
-          &:after{
-            content:'COMING SOON';
+          &:after {
+            content: 'COMING SOON';
           }
         }
       }
       &#teamToken_header {
-        &:after{
-          content:'ADD TEAM TOKEN';
+        &:after {
+          content: 'ADD TEAM TOKEN';
         }
         &:hover {
-          &:after{
-            content:'COMING SOON';
+          &:after {
+            content: 'COMING SOON';
           }
         }
       }
       &#connect_header {
-        &:after{
-          content:'CONNECT';
+        &:after {
+          content: 'CONNECT';
         }
         &:hover {
-          &:after{
-            content:'COMING SOON';
+          &:after {
+            content: 'COMING SOON';
           }
         }
       }
@@ -154,10 +155,9 @@ const Header = () => {
         <NextLink href="/#token">Token</NextLink>
         <NextLink href="/#road-map">Roadmap</NextLink>
         <NextLink href="/#whitepaper">Whitepaper</NextLink>
-        <a id='marketplace_header' href="/#"></a>
-        <a id='teamToken_header' href="/#"></a>
-        <a id='connect_header' href="/#"></a>
-        {/* <GlobeIcon /> */}
+        <a id="marketplace_header" href="/#" />
+        <a id="teamToken_header" href="/#" />
+        <a id="connect_header" href="/#" />
       </NavContainer>
 
       <HamburgerContainer>

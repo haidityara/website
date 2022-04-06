@@ -58,7 +58,9 @@ const AboutSection = () => {
             TEAM™ has a proprietary scalable solution for guild management
           </Paragraph>
 
-          <Button type="down" style={{ marginTop: 50 }}>Explore More</Button>
+          <Button type="down" style={{ marginTop: 50 }}>
+            Explore More
+          </Button>
         </div>
 
         <ScrollAnimation animateOnce animateIn="fadeInUp">

@@ -10,7 +10,12 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import Image from 'components/Image';
 import useProgressiveImage from 'src/hooks/useProgressiveImage';
 import ChervonLeft from 'public/assets/chervon-left.svg';
-import { data } from '../constants/Common';
+
+const data = {
+  EMAIL_FORM_ACTION:
+    'https://script.google.com/macros/s/AKfycbxKg7lfAKoAVG8GiLV9ooNk01BLepCOZT5kDvrFbtigNhPn0yRCBZFZI9iM3rHGb5o3/exec',
+  EMAIL_FORM_RECEIVER: 'truonghaibang1997@gmail.com'
+};
 
 const BgContainer = styled.div<{ bgImage: string }>`
   background: linear-gradient(
@@ -77,6 +82,20 @@ const RobotGalaxySection = () => {
     background: '#171717',
     height: '48px'
   };
+
+  const submitForm = (e: any) => {
+    e.preventDefault();
+    const email = e.target.email.value;
+    const formData = new FormData();
+    formData.append('email', email);
+    fetch(data.EMAIL_FORM_ACTION, {
+      method: 'POST',
+      body: formData
+    }).then(() => {
+      window.location.reload();
+    });
+  };
+
   return (
     <BgContainer bgImage={bgImage}>
       <BeginSectionContainer>
@@ -121,6 +140,7 @@ const RobotGalaxySection = () => {
           <H3>Receive</H3>
           <H3>transmission</H3>
           <form
+            onSubmit={submitForm}
             className="gform"
             method="POST"
             action={data.EMAIL_FORM_ACTION}
