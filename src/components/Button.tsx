@@ -31,12 +31,12 @@ const WrapperButton = styled.div<{ isActive?: boolean }>`
 interface ButtonProps extends HTMLAttributes<HTMLDivElement> {
   onClick?: any;
   isActive?: boolean;
-  type: string;
+  type?: string;
 }
 
 const Button = forwardRef<HTMLDivElement, PropsWithChildren<ButtonProps>>(
   ({ onClick, children, ...props }, ref) => {
-    const arrow = props.type === "down" ? <DownArrowSvg /> : <ArrowSvg />;
+    const arrow = props.type === 'down' ? <DownArrowSvg /> : <ArrowSvg />;
     return (
       <WrapperButton ref={ref} onClick={onClick} {...props}>
         {children}
@@ -44,7 +44,7 @@ const Button = forwardRef<HTMLDivElement, PropsWithChildren<ButtonProps>>(
           {arrow}
         </div>
       </WrapperButton>
-    )
+    );
   }
 );
 
