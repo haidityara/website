@@ -103,36 +103,49 @@ const RobotGalaxySection = () => {
           <Parallax easing="easeIn" translateY={[100, 0]}>
             <div style={{ position: 'relative' }}>
               <Parallax speed={10}>
-                <div style={{ position: 'absolute', top: -180 }}>
+                <div
+                  style={{
+                    position: 'absolute',
+                    top: -200,
+                    transform: 'scale(130%)'
+                  }}
+                >
                   <Image
+                    objectFit="contain"
                     className="teamdao-pulse"
                     src={imgFragment1}
-                    width={450}
                     alt=""
                   />
                 </div>
               </Parallax>
               <Parallax speed={10}>
-                <div style={{ position: 'absolute', top: -200 }}>
-                  <Image
-                    className="teamdao-pulse"
-                    src={imgRobot}
-                    width={350}
-                    alt=""
-                  />
+                <div
+                  style={{
+                    position: 'absolute',
+                    top: -250
+                  }}
+                >
+                  <Image className="teamdao-pulse" src={imgRobot} alt="" />
                 </div>
               </Parallax>
               <Parallax speed={20}>
-                <div style={{ position: 'absolute', top: 50, left: -200 }}>
+                <div
+                  style={{
+                    position: 'absolute',
+                    top: 50,
+                    left: -200,
+                    width: 250
+                  }}
+                >
                   <Image
+                    objectFit="contain"
                     className="teamdao-pulse"
                     src={imgFragment2}
-                    width={200}
                     alt=""
                   />
                 </div>
               </Parallax>
-              <div style={{ width: 300, height: 10, visibility: 'hidden' }} />
+              <div style={{ width: 400, height: 10, visibility: 'hidden' }} />
             </div>
           </Parallax>
         </ScrollAnimation>

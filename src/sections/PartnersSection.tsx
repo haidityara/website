@@ -16,6 +16,8 @@ import imgNGC from 'public/assets/partners/partners-ngc-ventures.png';
 import imgLibraCapitalVentures from 'public/assets/partners/partners-libra-capital-ventures.png';
 import imgGsg from 'public/assets/partners/partners-gsg.png';
 import imgReadWP from 'public/assets/whitepaper-container.png';
+import imgCoinHako from 'public/assets/partners/partners-coinhako.png';
+
 import Button from 'components/Button';
 import Image from 'components/Image';
 import useProgressiveImage from 'src/hooks/useProgressiveImage';
@@ -80,47 +82,55 @@ const PartnersSection = () => {
             <H2 style={{ display: 'inline-block' }}>Partners</H2>
           </div>
           <Columns>
-            <Item>
-              <Image src={imgAnimoca} alt="partner" />
-            </Item>
-            <Item>
-              <Image src={imgKrust} alt="partner" />
-            </Item>
+            <Columns style={{ width: '100%' }}>
+              <Item>
+                <Image src={imgAnimoca} alt="partner" />
+              </Item>
+              <Item>
+                <Image src={imgKrust} alt="partner" />
+              </Item>
+              <Item>
+                <Image src={imgGsg} alt="partner" />
+              </Item>
+            </Columns>
+
             <Item>
               <Image src={imgShima} alt="partner" />
             </Item>
             <Item>
               <Image src={imgAntiFund} alt="partner" />
             </Item>
+            <Item>
+              <Image src={imgNexo} alt="partner" />
+            </Item>
+            <Item>
+              <Image src={imgLibraCapitalVentures} alt="partner" />
+            </Item>
 
             <Item>
               <Image src={imgAlgorand} alt="partner" />
             </Item>
             <Item>
-              <Image src={imgLibraCapitalVentures} alt="partner" />
-            </Item>
-            <Item>
-              <Image src={imgNexo} alt="partner" />
-            </Item>
-            <Item>
               <Image src={imgGsr} alt="partner" />
+            </Item>
+            <Item>
+              <Image src={imgOctava} alt="partner" />
+            </Item>
+            <Item>
+              <H4>RisingCap</H4>
             </Item>
 
             <Item>
               <Image src={imgExcap} alt="partner" />
             </Item>
             <Item>
-              <Image src={imgOctava} alt="partner" />
-            </Item>
-            <Item>
               <Image src={imgNGC} alt="partner" />
             </Item>
             <Item>
-              <Image src={imgEverseCapital} alt="partner" />
+              <Image src={imgCoinHako} alt="partner" />
             </Item>
-
             <Item>
-              <Image src={imgGsg} alt="partner" />
+              <Image src={imgEverseCapital} alt="partner" />
             </Item>
           </Columns>
 
