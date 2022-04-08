@@ -17,6 +17,7 @@ import imgLibraCapitalVentures from 'public/assets/partners/partners-libra-capit
 import imgGsg from 'public/assets/partners/partners-gsg.png';
 import imgReadWP from 'public/assets/whitepaper-container.png';
 import imgCoinHako from 'public/assets/partners/partners-coinhako.png';
+import imgRisingCapital from 'public/assets/partners/partners-rising-cap.png';
 
 import Button from 'components/Button';
 import Image from 'components/Image';
@@ -49,17 +50,17 @@ const Container = styled.div`
   }
 `;
 
-const Columns = styled.div`
+const Columns = styled.div<{ widthSize : string }>`
   display: flex;
   gap: 40px;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   > div {
-    width: 20%;
+    width: ${({ widthSize }) => widthSize};
 
     @media (max-width: 768px) {
-      width: 20%;
+      width: ${({ widthSize }) => widthSize};
     }
 
     @media (max-width: 500px) {
@@ -81,8 +82,8 @@ const PartnersSection = () => {
           <div style={{ marginBottom: 150 }}>
             <H2 style={{ display: 'inline-block' }}>Partners</H2>
           </div>
-          <Columns>
-            <Columns style={{ width: '100%' }}>
+          <Columns widthSize='18%'>
+            <Columns widthSize='20%' style={{ width: '100%' }}>
               <Item>
                 <Image src={imgAnimoca} alt="partner" />
               </Item>
@@ -117,7 +118,7 @@ const PartnersSection = () => {
               <Image src={imgOctava} alt="partner" />
             </Item>
             <Item>
-              <H4>RisingCap</H4>
+              <Image src={imgRisingCapital} alt="partner" />
             </Item>
 
             <Item>
