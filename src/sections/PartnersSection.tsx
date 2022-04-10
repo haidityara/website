@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { H2, H4, Paragraph } from 'components/Typo';
+import { H2, H4 } from 'components/Typo';
 import imgBackground from 'public/assets/galaxy-night-view.png';
 import imgBackgroundLazy from 'public/assets/background-galaxy-lazy.png';
 import imgAnimoca from 'public/assets/partners/partners-animoca.png';
@@ -50,22 +50,32 @@ const Container = styled.div`
   }
 `;
 
-const Columns = styled.div<{ widthSize : string }>`
+const Columns = styled.div<{ widthSize: string }>`
   display: flex;
-  gap: 40px;
+  gap: 30px;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+
+  img {
+    width: 100%;
+  }
+
   > div {
     width: ${({ widthSize }) => widthSize};
 
-    @media (max-width: 768px) {
+    @media (min-width: 768px) {
       width: ${({ widthSize }) => widthSize};
     }
+  }
+`;
 
-    @media (max-width: 500px) {
-      width: 30%;
-    }
+const ResponsiveBtn = styled(Button)`
+  margin-top: 30px;
+  @media (max-width: 768px) {
+    width: 100px;
+    padding: 8px;
+    margin-top: 10px;
   }
 `;
 
@@ -82,91 +92,100 @@ const PartnersSection = () => {
           <div style={{ marginBottom: 150 }}>
             <H2 style={{ display: 'inline-block' }}>Partners</H2>
           </div>
-          <Columns widthSize='18%'>
-            <Columns widthSize='20%' style={{ width: '100%' }}>
-              <Item>
-                <Image src={imgAnimoca} alt="partner" />
-              </Item>
-              <Item>
-                <Image src={imgKrust} alt="partner" />
-              </Item>
-              <Item>
-                <Image src={imgGsg} alt="partner" />
-              </Item>
+          <Columns widthSize="17%">
+            <Columns
+              widthSize="22%"
+              style={{ width: '100%', justifyContent: 'space-around', gap: 0 }}
+            >
+              <Columns widthSize="45%" style={{ width: '47%' }}>
+                <Item>
+                  <img src={imgAnimoca.src} alt="partner" />
+                </Item>
+                <Item>
+                  <img src={imgKrust.src} alt="partner" />
+                </Item>
+              </Columns>
+              <Columns widthSize="45%" style={{ width: '47%' }}>
+                <Item>
+                  <img src={imgShima.src} alt="partner" />
+                </Item>
+                <Item>
+                  <img src={imgAntiFund.src} alt="partner" />
+                </Item>
+              </Columns>
             </Columns>
 
             <Item>
-              <Image src={imgShima} alt="partner" />
+              <img src={imgAlgorand.src} alt="partner" />
             </Item>
             <Item>
-              <Image src={imgAntiFund} alt="partner" />
+              <img src={imgNGC.src} alt="partner" />
             </Item>
             <Item>
-              <Image src={imgNexo} alt="partner" />
+              <img src={imgLibraCapitalVentures.src} alt="partner" />
             </Item>
             <Item>
-              <Image src={imgLibraCapitalVentures} alt="partner" />
-            </Item>
-
-            <Item>
-              <Image src={imgAlgorand} alt="partner" />
+              <img src={imgNexo.src} alt="partner" />
             </Item>
             <Item>
-              <Image src={imgGsr} alt="partner" />
-            </Item>
-            <Item>
-              <Image src={imgOctava} alt="partner" />
-            </Item>
-            <Item>
-              <Image src={imgRisingCapital} alt="partner" />
+              <img src={imgGsr.src} alt="partner" />
             </Item>
 
             <Item>
-              <Image src={imgExcap} alt="partner" />
+              <img src={imgExcap.src} alt="partner" />
             </Item>
             <Item>
-              <Image src={imgNGC} alt="partner" />
+              <img src={imgCoinHako.src} alt="partner" />
             </Item>
             <Item>
-              <Image src={imgCoinHako} alt="partner" />
+              <img src={imgOctava.src} alt="partner" />
             </Item>
             <Item>
-              <Image src={imgEverseCapital} alt="partner" />
+              <img src={imgRisingCapital.src} alt="partner" />
+            </Item>
+            <Item>
+              <img src={imgEverseCapital.src} alt="partner" />
+            </Item>
+          </Columns>
+
+          <div style={{ margin: '150px 0' }}>
+            <H2 style={{ display: 'inline-block' }}>Advisors</H2>
+          </div>
+          <Columns widthSize="22%">
+            <Item>
+              <img src={imgGsg.src} alt="partner" />
             </Item>
           </Columns>
 
           <div style={{ position: 'relative' }}>
             <div style={{ marginBottom: 80, width: '100%', minWidth: 700 }}>
-              <Image src={imgReadWP} alt="partner" />
+              <div
+                id="whitepaper"
+                style={{
+                  position: 'absolute',
+                  textAlign: 'center',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'flex-start',
+                  flexDirection: 'column',
+                  padding: '2%',
+                  top: '32%',
+                  left: '4%',
+                  width: 200,
+                  zIndex: 100
+                }}
+              >
+                <H4 style={{ textAlign: 'left' }}>Read the Whitepaper</H4>
+                <ResponsiveBtn
+                  type="diagonal"
+                  onClick={() => window.open('https://whitepaper.teamdao.com/')}
+                >
+                  Explore
+                </ResponsiveBtn>
+              </div>
             </div>
 
-            <div
-              id="whitepaper"
-              style={{
-                position: 'absolute',
-                width: 'calc(50% - 8%)',
-                textAlign: 'left',
-                padding: '2%',
-                top: '32%',
-                left: '4%',
-                minWidth: 400
-              }}
-            >
-              <H4>Read the Whitepaper</H4>
-              <Paragraph style={{ marginTop: 14 }}>
-                Direct ownership: TEAM will directly own, develop and generate
-                yield on high quality NFT and metaverse assets. Indirect
-                ownership: TEAM retains 20% ownership of all assets purchased by
-                TEAM owners.
-              </Paragraph>
-              <Button
-                type="diagonal"
-                style={{ marginTop: 30 }}
-                onClick={() => window.open('https://whitepaper.teamdao.com/')}
-              >
-                Explore
-              </Button>
-            </div>
+            <Image src={imgReadWP} alt="partner" />
           </div>
         </Container>
       </BgContainer>

@@ -94,7 +94,7 @@ const RoadmapSection = () => {
                 marginTop: 80
               }}
             >
-              WTEAM ROLL OUT, WTEAM MARKETPLACE, TEAM SCHOLAR WALLETS
+              wTEAM ROLL OUT, wTEAM MARKETPLACE, TEAM SCHOLAR WALLETS
             </Paragraph>
           </Item>
           <Item>
@@ -107,7 +107,7 @@ const RoadmapSection = () => {
                 marginTop: 80
               }}
             >
-              WTEAM STAKING VAULTS, TEAM DAO, EXPANSION
+              wTEAM STAKING VAULTS, TEAM DAO, EXPANSION
             </Paragraph>
           </Item>
         </Columns>

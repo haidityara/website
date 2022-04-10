@@ -14,6 +14,8 @@ import RobotBottomSection from 'sections/RobotBottomSection';
 import Footer from 'components/Footer';
 import LoadingScreen from 'sections/LoadingScreen';
 import { useEffect, useState } from 'react';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -31,6 +33,12 @@ const App = () => {
       <div style={{ display: !loading ? 'none' : 'block' }}>
         <LoadingScreen />
       </div>
+      <ToastContainer
+        position="top-center"
+        hideProgressBar={false}
+        newestOnTop={false}
+        theme="dark"
+      />
       <ParallaxProvider>
         <div
           style={{

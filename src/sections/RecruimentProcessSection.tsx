@@ -24,8 +24,9 @@ const TagContainer = styled.div`
   @media (max-width: 768px) {
     transform: none;
     flex-wrap: wrap;
-    gap: 20px;
+    flex-direction: column;
     justify-content: center;
+    gap: 20px;
   }
 `;
 

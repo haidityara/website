@@ -11,6 +11,8 @@ import imgFragment3 from 'public/assets/fragment3.png';
 import ScrollAnimation from 'react-animate-on-scroll';
 import Image from 'components/Image';
 import useProgressiveImage from 'src/hooks/useProgressiveImage';
+import { useState } from 'react';
+import EmailInput from 'components/EmailInput';
 
 const BgContainer = styled.div<{ bgImage: string }>`
   background: linear-gradient(
@@ -49,18 +51,26 @@ const BeginSectionContainer = styled.div`
 
 const AboutSection = () => {
   const bgImage = useProgressiveImage(bgGalaxy.src, bgLazy.src);
+  const [showInput, setShowInput] = useState(false);
+
   return (
     <BgContainer bgImage={bgImage}>
       <BeginSectionContainer id="about-us">
         <div>
           <H2>About TEAM</H2>
           <Paragraph style={{ marginTop: 24, width: 260 }}>
-            TEAM™ has a proprietary scalable solution for guild management
+            TEAM has a proprietary scalable solution for guild management
           </Paragraph>
 
-          <Button type="down" style={{ marginTop: 50 }}>
-            Explore More
-          </Button>
+          <div style={{ marginTop: 50, minHeight: 60 }}>
+            {!showInput ? (
+              <Button onClick={() => setShowInput(true)} showIcon={false}>
+                Get updates
+              </Button>
+            ) : (
+              <EmailInput />
+            )}
+          </div>
         </div>
 
         <ScrollAnimation animateOnce animateIn="fadeInUp">

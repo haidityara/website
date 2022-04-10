@@ -49,6 +49,18 @@ const ImgContainer = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
+  margin-top: 100px;
+
+  @media (min-width: 1440px) {
+    margin-top: 200px;
+  }
+
+  @media (max-width: 768px) {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+  }
 `;
 
 const BeginSection = () => {
@@ -57,7 +69,7 @@ const BeginSection = () => {
   return (
     <BeginSectionContainer bgImage={bgImage}>
       <Header />
-      <ImgContainer style={{ marginTop: 100 }}>
+      <ImgContainer>
         <div className="teamdao-flash">
           <Image className="teamdao-pulse" src={Robot1} alt="" />
         </div>

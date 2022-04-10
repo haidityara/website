@@ -1,3 +1,4 @@
+/* eslint-disable object-curly-newline */
 import { forwardRef, HTMLAttributes, PropsWithChildren } from 'react';
 import styled from 'styled-components';
 import DownArrowSvg from 'public/assets/arrow_down.svg';
@@ -32,17 +33,20 @@ interface ButtonProps extends HTMLAttributes<HTMLDivElement> {
   onClick?: any;
   isActive?: boolean;
   type?: string;
+  showIcon?: boolean;
 }
 
 const Button = forwardRef<HTMLDivElement, PropsWithChildren<ButtonProps>>(
-  ({ onClick, children, ...props }, ref) => {
+  ({ onClick, children, showIcon = true, ...props }, ref) => {
     const arrow = props.type === 'down' ? <DownArrowSvg /> : <ArrowSvg />;
     return (
       <WrapperButton ref={ref} onClick={onClick} {...props}>
         {children}
-        <div style={{ marginLeft: 8, display: 'flex', alignItems: 'center' }}>
-          {arrow}
-        </div>
+        {showIcon && (
+          <div style={{ marginLeft: 8, display: 'flex', alignItems: 'center' }}>
+            {arrow}
+          </div>
+        )}
       </WrapperButton>
     );
   }
