@@ -47,8 +47,16 @@ const Footer = () => (
     <ConnectContainer>
       <Image src={imgLogo} alt="logo" />
       <SocialMediaContainer>
-        <a href="https://t.me/TEAMDAO" target="_blank"><TelegramIcon /></a>
-        <a href="https://twitter.com/TEAMDAOcom" target="_blank"><TwitterIcon /></a>
+        <a href="https://t.me/TEAMDAO" target="_blank" rel="noreferrer">
+          <TelegramIcon />
+        </a>
+        <a
+          href="https://twitter.com/TEAMDAOcom"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <TwitterIcon />
+        </a>
       </SocialMediaContainer>
     </ConnectContainer>
   </FooterContainer>
