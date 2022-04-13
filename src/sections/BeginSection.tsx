@@ -40,7 +40,7 @@ const BigGlowText = styled.h2`
   word-break: break-word;
 
   @media (max-width: 768px) {
-    font-size: 3rem;
+    font-size: 2.6rem;
     line-height: 0.9;
   }
 `;
@@ -75,7 +75,7 @@ const BeginSection = () => {
         </div>
       </ImgContainer>
       <div style={{ width: '80%', margin: 'auto' }}>
-        <BigGlowText>$TEAM up with the metaverse’s first Guild 3.0</BigGlowText>
+        <BigGlowText>$TEAM up with the metaverse’s first <br/> Guild 3.0</BigGlowText>
       </div>
 
       <ImgContainer style={{ height: 100 }}>
