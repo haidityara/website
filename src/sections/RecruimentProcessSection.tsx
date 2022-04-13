@@ -16,10 +16,22 @@ const Container = styled.div`
 
 const TagContainer = styled.div`
   display: flex;
-  gap: 96px;
   min-height: 435px;
   align-items: center;
   transform: translateX(144px);
+  gap: 94px;
+
+  > div {
+    word-break: break-word;
+  }
+
+  @media (max-width: 1280px) {
+    transform: none;
+    gap: 0px;
+    > div {
+      font-size: 34px;
+    }
+  }
 
   @media (max-width: 768px) {
     transform: none;
@@ -27,6 +39,9 @@ const TagContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     gap: 20px;
+    > div {
+      font-size: 20px;
+    }
   }
 `;
 
