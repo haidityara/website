@@ -10,6 +10,7 @@ import particleConfig from 'public/assets/particleBottomRight.json';
 import BlurredCircle from 'components/BlurredCircle';
 import Image from 'components/Image';
 import ScrollAnimation from 'react-animate-on-scroll';
+import { isMobile } from 'react-device-detect';
 
 const Container = styled.div`
   max-width: 80%;
@@ -53,6 +54,7 @@ const Columns = styled.div`
 const TokenSection = () => (
   <Container>
     <Parallax
+      disabled={isMobile}
       speed={1}
       translateY={[300, -100]}
       translateX={[300, -100]}

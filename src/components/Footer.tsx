@@ -45,7 +45,7 @@ const Footer = () => (
   <FooterContainer>
     <Divider />
     <ConnectContainer>
-      <Image src={imgLogo} alt="logo" />
+      <Image width={131} height={38} src={imgLogo} alt="logo" />
       <SocialMediaContainer>
         <a href="https://t.me/TEAMDAO" target="_blank" rel="noreferrer">
           <TelegramIcon />

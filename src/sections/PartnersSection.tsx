@@ -18,6 +18,8 @@ import imgGsg from 'public/assets/partners/partners-gsg.png';
 import imgReadWP from 'public/assets/whitepaper-container.png';
 import imgCoinHako from 'public/assets/partners/partners-coinhako.png';
 import imgRisingCapital from 'public/assets/partners/partners-rising-cap.png';
+import imgGainAssociate from 'public/assets/partners/partners-gains-associsates.png';
+import imgNxgen from 'public/assets/partners/partners-nxgen.png';
 
 import Button from 'components/Button';
 import Image from 'components/Image';
@@ -145,6 +147,12 @@ const PartnersSection = () => {
             </Item>
             <Item>
               <img src={imgEverseCapital.src} alt="partner" />
+            </Item>
+            <Item>
+              <img src={imgGainAssociate.src} alt="partner" />
+            </Item>
+            <Item>
+              <img src={imgNxgen.src} alt="partner" />
             </Item>
           </Columns>
 

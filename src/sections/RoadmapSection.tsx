@@ -10,6 +10,7 @@ import imgLogo3 from 'public/assets/roadmap-logo3.png';
 import { Parallax } from 'react-scroll-parallax';
 import Image from 'components/Image';
 import useProgressiveImage from 'src/hooks/useProgressiveImage';
+import { isMobile } from 'react-device-detect';
 
 const BgContainer = styled.div<{ bgImage: string }>`
   background: url(${({ bgImage }) => bgImage});
@@ -55,6 +56,7 @@ const RoadmapSection = () => {
       <BgContainer bgImage={bgImage}>
         <ImgContainer>
           <Parallax
+            disabled={isMobile}
             translateX={[0, 500]}
             style={{ position: 'absolute', bottom: '20%' }}
           >

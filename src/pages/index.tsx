@@ -13,8 +13,9 @@ import WrappedTeamSection from 'sections/WrappedTeamSection';
 import RobotBottomSection from 'sections/RobotBottomSection';
 import Footer from 'components/Footer';
 import LoadingScreen from 'sections/LoadingScreen';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ToastContainer } from 'react-toastify';
+
 import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {

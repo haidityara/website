@@ -12,6 +12,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import BlurredCircle from 'components/BlurredCircle';
 import Image from 'components/Image';
 import useProgressiveImage from 'src/hooks/useProgressiveImage';
+import { isMobile } from 'react-device-detect';
 
 const BgContainer = styled.div<{ bgImage: string }>`
   background: linear-gradient(
@@ -42,9 +43,9 @@ const RobotGalaxySection = () => {
     <BgContainer bgImage={bgImage}>
       <BeginSectionContainer>
         <ScrollAnimation animateIn="fadeInUp" animateOnce>
-          <Parallax easing="easeIn" translateY={[100, 0]}>
+          <Parallax disabled={isMobile} easing="easeIn" translateY={[100, 0]}>
             <div style={{ position: 'relative' }}>
-              <Parallax speed={12}>
+              <Parallax disabled={isMobile} speed={12}>
                 <div
                   className="teamdao-pulse"
                   style={{ position: 'absolute', left: 50, top: -330 }}
@@ -52,7 +53,7 @@ const RobotGalaxySection = () => {
                   <Image src={imgFragment2} width={272} alt="" />
                 </div>
               </Parallax>
-              <Parallax speed={15.5}>
+              <Parallax disabled={isMobile} speed={15.5}>
                 <div
                   className="teamdao-pulse-delay"
                   style={{ position: 'absolute', top: -150 }}
@@ -60,7 +61,7 @@ const RobotGalaxySection = () => {
                   <Image src={imgRobot} width={300} alt="" />
                 </div>
               </Parallax>
-              <Parallax speed={16}>
+              <Parallax disabled={isMobile} speed={16}>
                 <div
                   className="teamdao-pulse"
                   style={{ position: 'absolute', top: -100 }}
@@ -68,7 +69,7 @@ const RobotGalaxySection = () => {
                   <Image src={imgFragment1} width={300} alt="" />
                 </div>
               </Parallax>
-              <Parallax speed={3}>
+              <Parallax disabled={isMobile} speed={3}>
                 <div
                   className="teamdao-pulse-delay"
                   style={{ position: 'absolute', top: -280, left: -380 }}
@@ -76,7 +77,7 @@ const RobotGalaxySection = () => {
                   <Image src={Fragment} alt="" />
                 </div>
               </Parallax>
-              <Parallax speed={10}>
+              <Parallax disabled={isMobile} speed={10}>
                 <div
                   className="teamdao-pulse-delay"
                   style={{ position: 'absolute', top: -30, left: -520 }}
@@ -84,7 +85,7 @@ const RobotGalaxySection = () => {
                   <Image src={Token4} alt="" />
                 </div>
               </Parallax>
-              <Parallax speed={9}>
+              <Parallax disabled={isMobile} speed={9}>
                 <div
                   className="teamdao-pulse-delay"
                   style={{ position: 'absolute', top: 200, left: 500 }}

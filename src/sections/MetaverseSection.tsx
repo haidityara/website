@@ -33,7 +33,7 @@ const MetaverseSection = () => (
       <ScrollAnimation animateOnce animateIn="fadeInRight">
         <div style={{ maxWidth: 602 }}>
           <Paragraph>
-            TEAM™ carefully selects which metaverse and blockchain P2E games to
+            TEAM carefully selects which metaverse and blockchain P2E games to
             participate in through a rigorous in-house curation methodology.
           </Paragraph>
 

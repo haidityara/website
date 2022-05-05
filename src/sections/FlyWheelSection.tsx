@@ -9,6 +9,7 @@ import { Parallax } from 'react-scroll-parallax';
 import { useEffect, useState, useRef } from 'react';
 import Image from 'components/Image';
 import useProgressiveImage from 'src/hooks/useProgressiveImage';
+import { isMobile } from 'react-device-detect';
 
 const Container = styled.div<{ bgImage: string }>`
   margin-top: 50px;
@@ -84,7 +85,7 @@ const infos = [
   {
     title: 'PLAYERS',
     content: [
-      '% of player earmings governed by DAO, purchase $TEAM',
+      '% of player earnings governed by DAO, purchase $TEAM',
       'Players are paid in $TEAM with the option to stake $TEAM for higher yields'
     ]
   },
@@ -97,7 +98,7 @@ const infos = [
   {
     title: 'ASSETS',
     content: [
-      'DAO retains ownership % of all wTEAMs, creating exposure to asset appreciation w/out depreciation risk.',
+      'DAO retains ownership % of all wTEAMs, creating exposure to asset appreciation w/out depreciation risk',
       '$TEAM holders have voting rights on DAO assets'
     ]
   }
@@ -155,8 +156,12 @@ const FlyWheelSection = () => {
         </div>
 
         <div style={{ position: 'relative' }}>
-          <Parallax translateY={[-5, 5]}>
-            <StyledParallax className="teamdao-pulse" translateY={[-5, 5]}>
+          <Parallax disabled={isMobile} translateY={[-5, 5]}>
+            <StyledParallax
+              disabled={isMobile}
+              className="teamdao-pulse"
+              translateY={[-5, 5]}
+            >
               <Image src={imgSteamFlyWheelToken} alt="" objectFit="contain" />
             </StyledParallax>
             <Image src={imgSteamFlyWheel} alt="" objectFit="contain" />

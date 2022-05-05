@@ -145,7 +145,7 @@ const Header = () => {
   return (
     <HeaderContainer>
       <a href="/">
-        <Image src={imgLogo} alt="logo" />
+        <Image width={131} height={38} src={imgLogo} alt="logo" />
       </a>
 
       <NavContainer data-toggle={isOpen}>

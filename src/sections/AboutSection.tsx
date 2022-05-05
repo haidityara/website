@@ -13,6 +13,7 @@ import Image from 'components/Image';
 import useProgressiveImage from 'src/hooks/useProgressiveImage';
 import { useState } from 'react';
 import EmailInput from 'components/EmailInput';
+import { isMobile } from 'react-device-detect';
 
 const BgContainer = styled.div<{ bgImage: string }>`
   background: linear-gradient(
@@ -42,6 +43,7 @@ const BeginSectionContainer = styled.div`
     width: 401px;
     @media (max-width: 768px) {
       align-items: center;
+      height: 700px;
     }
   }
   @media (max-width: 768px) {
@@ -74,9 +76,9 @@ const AboutSection = () => {
         </div>
 
         <ScrollAnimation animateOnce animateIn="fadeInUp">
-          <Parallax easing="easeIn" translateY={[100, 0]}>
+          <Parallax disabled={isMobile} easing="easeIn" translateY={[100, 0]}>
             <div style={{ position: 'relative' }}>
-              <Parallax speed={12}>
+              <Parallax disabled={isMobile} speed={12}>
                 <div
                   className="teamdao-pulse"
                   style={{ position: 'absolute', left: 50, top: -330 }}
@@ -84,7 +86,7 @@ const AboutSection = () => {
                   <Image src={imgFragment2} width={272} alt="" />
                 </div>
               </Parallax>
-              <Parallax speed={15.5}>
+              <Parallax disabled={isMobile} speed={15.5}>
                 <div
                   className="teamdao-pulse-delay"
                   style={{ position: 'absolute', top: -150 }}
@@ -92,7 +94,7 @@ const AboutSection = () => {
                   <Image src={imgRobot} width={300} alt="" />
                 </div>
               </Parallax>
-              <Parallax speed={16}>
+              <Parallax disabled={isMobile} speed={16}>
                 <div
                   className="teamdao-pulse"
                   style={{ position: 'absolute', top: -100 }}
@@ -100,7 +102,7 @@ const AboutSection = () => {
                   <Image src={imgFragment1} width={300} alt="" />
                 </div>
               </Parallax>
-              <Parallax speed={7}>
+              <Parallax disabled={isMobile} speed={7}>
                 <div
                   className="teamdao-pulse-delay"
                   style={{ position: 'absolute', top: 100, left: -200 }}
