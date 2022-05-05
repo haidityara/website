@@ -60,10 +60,11 @@ const AboutSection = () => {
       <BeginSectionContainer id="about-us">
         <div>
           <H2>About TEAM</H2>
-          <Paragraph style={{ marginTop: 24, width: 260 }}>
-            TEAM has a proprietary scalable solution for guild management
+          <Paragraph style={{ marginTop: 24, width: 450 }}>
+            TEAM DAO is a tech-enabled decentralised guild.<br/>
+            Utilise our proprietary scalable solution for guild management.<br/>
+            Form your own guild with TEAM DAO          
           </Paragraph>
-
           <div style={{ marginTop: 50, minHeight: 60 }}>
             {!showInput ? (
               <Button onClick={() => setShowInput(true)} showIcon={false}>

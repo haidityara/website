@@ -20,6 +20,7 @@ import imgCoinHako from 'public/assets/partners/partners-coinhako.png';
 import imgRisingCapital from 'public/assets/partners/partners-rising-cap.png';
 import imgGainAssociate from 'public/assets/partners/partners-gains-associsates.png';
 import imgNxgen from 'public/assets/partners/partners-nxgen.png';
+import imgBaseLayer from 'public/assets/partners/partners-baselayer.png';
 
 import Button from 'components/Button';
 import Image from 'components/Image';
@@ -153,6 +154,9 @@ const PartnersSection = () => {
             </Item>
             <Item>
               <img src={imgNxgen.src} alt="partner" />
+            </Item>
+            <Item>
+              <img src={imgBaseLayer.src} alt="partner" />
             </Item>
           </Columns>
 
