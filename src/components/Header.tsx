@@ -136,6 +136,71 @@ const HamburgerContainer = styled.div`
 
 const Header = () => {
   const [isOpen, setOpen] = useState(false);
+  const [currentAccount, setCurrentAccount] = useState("");
+
+  const connectWallet = async () => {
+    try {
+        const {ethereum} = window;
+        if (!ethereum) {
+            alert("get metamask");
+            return;
+        }
+
+        const accounts = await ethereum.request({method: "eth_requestAccounts"});
+        console.log("connected", accounts[0]);
+        setCurrentAccount(accounts[0]);
+    } catch (e) {
+        console.log("Error", e);
+    }
+  }
+
+  const ifWalletConnected = async () => {
+    try {
+        // make sure have access window ethereum
+        const {ethereum} = window;
+
+        if (!ethereum) {
+            console.log("No ethereum found");
+        } else {
+            console.log("Ethereum found", ethereum);
+        }
+
+        // check if authorized using wallet connect
+        const accounts = await ethereum.request({method: "eth_accounts"});
+
+        if (accounts.length !== 0) {
+            const account = accounts[0];
+            console.log("Account found", account);
+            setCurrentAccount(account);
+        } else {
+            console.log("No account found");
+        }
+    } catch (e) {
+        console.log("Error", e);
+    }
+  }
+
+  const addTeamToken = async () => {
+    web3.currentProvider.sendAsync({
+        method: 'metamask_watchAsset',
+        params: {
+            "type": "ERC20",
+            "options": {
+                "address": "0x9BADA086BAE4962037f14B0e79BaEa62e972dD21",
+                "symbol": "TEAM",
+                "decimals": 8,
+                "image": 'https://raw.githubusercontent.com/Team-Exchange/icons/master/TE_SMALL.png'
+            },
+        },
+        id: 20,
+    }, console.log)
+}
+
+  useEffect(() => {
+    ifWalletConnected();
+  }, []);
+
+
 
   useEffect(() => {
     const body = document.getElementsByTagName('body');
@@ -156,8 +221,14 @@ const Header = () => {
         <NextLink href="/#road-map">Roadmap</NextLink>
         <NextLink href="/#whitepaper">Whitepaper</NextLink>
         <a id="marketplace_header" href="/#" />
-        <a id="teamToken_header" href="/#" />
-        <a id="connect_header" href="/#" />
+        {/* <a id="teamToken_header" href="/#" /> */}
+        <a onClick={() => addTeamToken()} href="/#connect">
+          Add TEAM TOKEN
+        </a>
+        {/* <a id="connect_header" href="/#" /> */}
+        <a onClick={() => connectWallet()} href="/#connect">
+          Connect        
+        </a>
       </NavContainer>
 
       <HamburgerContainer>
