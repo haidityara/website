@@ -18,6 +18,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module'
   },
+  ignorePatterns: ["babel.config.js"],
   plugins: ['react', '@typescript-eslint', 'prettier'],
   rules: {
     'import/no-extraneous-dependencies': 0,
