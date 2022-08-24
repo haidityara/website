@@ -106,17 +106,16 @@ const WrappedTeamSection = () => {
         </div>
       </SubContainer>
 
-      <BigGlowText>What can i do with a Wrapped Team?</BigGlowText>
+      <BigGlowText>How can I interact with these eSports teams?</BigGlowText>
 
       <EarthBG bgImage={bgImage}>
         <ChildContainer>
           <ChildSection>
             <div>
               <ScrollAnimation animateOnce animateIn="fadeInLeft">
-                <H3>Earn</H3>
+                <H3>BET</H3>
                 <Paragraph>
-                  wTEAMs generate income through numerous P2E games and
-                  metaverses of theirs & your choosing!
+                  Pick your chosen champion or side and choose your stakes!
                 </Paragraph>
               </ScrollAnimation>
             </div>
@@ -134,8 +133,7 @@ const WrappedTeamSection = () => {
               <ScrollAnimation animateOnce animateIn="fadeInLeft">
                 <H3>Trade</H3>
                 <Paragraph>
-                  Purchase & Sell wTEAMs on our TEAM Marketplace! Find the best
-                  player & pick up gems in TEAM DAO
+                  Buy & Sell the NFTs of different eSports players and teams
                 </Paragraph>
               </ScrollAnimation>
             </div>
@@ -155,9 +153,10 @@ const WrappedTeamSection = () => {
           <ChildSection>
             <div>
               <ScrollAnimation animateOnce animateIn="fadeInLeft">
-                <H3>Develop</H3>
+                <H3>PARTICIPATE</H3>
                 <Paragraph>
-                  Upgrade your wTEAM through player coaching and asset expansion
+                  In the upside when these eSports players and teams win world
+                  tournaments
                 </Paragraph>
               </ScrollAnimation>
             </div>

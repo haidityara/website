@@ -21,6 +21,8 @@ import imgRisingCapital from 'public/assets/partners/partners-rising-cap.png';
 import imgGainAssociate from 'public/assets/partners/partners-gains-associsates.png';
 import imgNxgen from 'public/assets/partners/partners-nxgen.png';
 import imgBaseLayer from 'public/assets/partners/partners-baselayer.png';
+import imgDwf from 'public/assets/partners/partners-dwf-labs.png';
+import imgGainAssoc from 'public/assets/partners/partners-gain-associates.png';
 
 import Button from 'components/Button';
 import Image from 'components/Image';
@@ -150,10 +152,13 @@ const PartnersSection = () => {
               <img src={imgEverseCapital.src} alt="partner" />
             </Item>
             <Item>
-              <img src={imgGainAssociate.src} alt="partner" />
+              <img src={imgDwf.src} alt="partner" />
             </Item>
             <Item>
               <img src={imgNxgen.src} alt="partner" />
+            </Item>
+            <Item>
+              <img src={imgGainAssociate.src} alt="partner" />
             </Item>
             <Item>
               <img src={imgBaseLayer.src} alt="partner" />
@@ -190,9 +195,9 @@ const PartnersSection = () => {
                 <H4 style={{ textAlign: 'left' }}>Read the Whitepaper</H4>
                 <ResponsiveBtn
                   type="diagonal"
-                  onClick={() => window.open('https://whitepaper.teamdao.com/')}
+                  // onClick={() => window.open('https://whitepaper.teamdao.com/')}
                 >
-                  Explore
+                  Coming Soon
                 </ResponsiveBtn>
               </div>
             </div>

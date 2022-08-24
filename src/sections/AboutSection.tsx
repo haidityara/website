@@ -61,11 +61,7 @@ const AboutSection = () => {
         <div>
           <H2>About TEAM</H2>
           <Paragraph style={{ marginTop: 24, width: 450 }}>
-            TEAM DAO is a tech-enabled decentralised guild.
-            <br />
-            Utilise our proprietary scalable solution for guild management.
-            <br />
-            Form your own guild with TEAM DAO
+            TEAM is an incubator for next generation eSports champions
           </Paragraph>
           <div style={{ marginTop: 50, minHeight: 60 }}>
             {!showInput ? (

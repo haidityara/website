@@ -33,8 +33,8 @@ const MetaverseSection = () => (
       <ScrollAnimation animateOnce animateIn="fadeInRight">
         <div style={{ maxWidth: 602 }}>
           <Paragraph>
-            TEAM carefully selects which metaverse and blockchain P2E games to
-            participate in through a rigorous in-house curation methodology.
+            TEAM DAO rigorously curates our list of games (web2 & web3) to
+            ensure quality and sustainability.
           </Paragraph>
 
           <Paragraph style={{ marginTop: 30 }}>
