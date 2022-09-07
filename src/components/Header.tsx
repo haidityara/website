@@ -224,7 +224,9 @@ const Header = () => {
         </a>
         <NextLink href="/#token">Token</NextLink>
         <NextLink href="/#road-map">Roadmap</NextLink>
-        <NextLink href="/#whitepaper">Whitepaper</NextLink>
+        <NextLink href="https://whitepaper.teamdao.com/">
+          <a target="_blank" rel="noreferrer">Whitepaper</a>
+        </NextLink>
         <a id="marketplace_header" href="/#" />
         {/* <a id="teamToken_header" href="/#" /> */}
         <a onClick={() => addTeamToken()} href="/#connect">
