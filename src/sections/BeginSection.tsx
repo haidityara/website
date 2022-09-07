@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Header from 'components/Header';
-import Bg1 from 'public/assets/bg2.jpg';
+import Bg1 from 'public/assets/bg2.png';
 import Bg1Lazy from 'public/assets/bg1-lazy.png';
 import Robot1 from 'public/assets/robot1.png';
 import CircleDown from 'public/assets/circle-down.png';
