@@ -76,7 +76,7 @@ const BeginSection = () => {
       </ImgContainer>
       <div style={{ width: '80%', margin: 'auto' }}>
         <BigGlowText>
-          $TEAM up with the Metaverse&#39;s first professional eSports teams
+            $TEAM IS THE <br/>#1 ESPORTS DAO
         </BigGlowText>
       </div>
 
