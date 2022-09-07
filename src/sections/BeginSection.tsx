@@ -75,9 +75,7 @@ const BeginSection = () => {
         </div>
       </ImgContainer>
       <div style={{ width: '80%', margin: 'auto' }}>
-        <BigGlowText>
-            $TEAM IS THE <br/>#1 ESPORTS DAO
-        </BigGlowText>
+        <BigGlowText>$TEAM IS THE{'\n'} #1 ESPORTS DAO</BigGlowText>
       </div>
 
       <ImgContainer style={{ height: 100 }}>

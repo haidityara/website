@@ -16,5 +16,8 @@ module.exports = {
     return {
       '/': { page: '/' }
     };
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
   }
 };

@@ -21,6 +21,7 @@ module.exports = {
   ignorePatterns: ["babel.config.js"],
   plugins: ['react', '@typescript-eslint', 'prettier'],
   rules: {
+    'linebreak-style': ["error", "windows"],
     'import/no-extraneous-dependencies': 0,
     'prettier/prettier': ['error', { singleQuote: true }],
     'react/function-component-definition': 0,

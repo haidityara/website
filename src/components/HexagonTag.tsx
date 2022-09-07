@@ -1,4 +1,4 @@
-import { forwardRef, HTMLAttributes, PropsWithChildren } from 'react';
+import {forwardRef, HTMLAttributes, PropsWithChildren} from 'react';
 import styled from 'styled-components';
 import imgHexagon from 'public/assets/hexagon.png';
 
@@ -33,15 +33,15 @@ const Wrapper = styled.div`
 `;
 
 interface ButtonProps extends HTMLAttributes<HTMLDivElement> {
-  onClick?: () => void;
+    onClick?: () => void;
 }
 
 const HexagonTag = forwardRef<HTMLDivElement, PropsWithChildren<ButtonProps>>(
-  ({ onClick, children, ...props }, ref) => (
-    <Wrapper ref={ref} {...props}>
-      {children}
-    </Wrapper>
-  )
+    ({onClick, children, ...props}, ref) => (
+        <Wrapper ref={ref} {...props}>
+            {children}
+        </Wrapper>
+    )
 );
 
 export default HexagonTag;
